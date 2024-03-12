@@ -2,19 +2,24 @@ import { ComponentPropsWithoutRef, ElementRef, ElementType, ForwardedRef, forwar
 
 import s from './button.module.scss'
 
+import { ButtonVariant } from '@/common'
+
 type Props<T extends ElementType> = {
   as?: T
+  variant?: keyof typeof ButtonVariant
 } & ComponentPropsWithoutRef<T>
 
 export const ButtonPolymorph = <T extends ElementType = 'button'>(
   props: Props<T> & Omit<ComponentPropsWithoutRef<T>, keyof Props<T>>,
   ref: ElementRef<T>
 ) => {
-  const { as: Tag = 'button', ...rest } = props
+  const { variant = ButtonVariant.primary, as: Tag = 'button', className, ...rest } = props
+
+  const buttonClassName = `${s.button} ${s[String(variant)]} ${className}`
 
   return (
     // @ts-expect-error TS2322
-    <Tag className={s.button} ref={ref} {...rest} />
+    <Tag className={buttonClassName} ref={ref} {...rest} />
   )
 }
 

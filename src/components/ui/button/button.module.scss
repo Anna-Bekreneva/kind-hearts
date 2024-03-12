@@ -10,7 +10,6 @@
   font-size: 16px;
   text-align: center;
 
-  background-color: var(--color-yellow-400);
   border-radius: 50%;
 
   /* stylelint-disable-next-line */
@@ -19,4 +18,12 @@
     height: 120px;
     font-size: 15px;
   }
+}
+
+.primary {
+  background-color: var(--color-yellow-400);
+}
+
+.secondary {
+  border: 1px solid var(--color-yellow-400);
 }
