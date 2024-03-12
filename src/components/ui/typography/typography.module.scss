@@ -1,0 +1,32 @@
+@import '../../../styles/mixins';
+
+.typography {
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.large {
+  @include adaptive-value-base('font-size', 70, 36, 1);
+
+  font-size: 70px;
+}
+
+.title {
+  @include adaptive-value-base('font-size', 50, 40, 1);
+
+  letter-spacing: 0.004rem;
+}
+
+.subtitle1 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.subtitle2 {
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.slogan {
+  @include adaptive-value-base('font-size', 40, 24, 1);
+}

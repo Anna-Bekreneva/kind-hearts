@@ -1,3 +1,5 @@
+@import 'mixins';
+
 body {
   font-family: Manrope, Arial, sans-serif;
   font-size: 16px;
@@ -6,6 +8,11 @@ body {
   color: var(--color-dark-700);
 
   background-color: var(--color-white);
+
+  /* stylelint-disable-next-line */
+  @include mq(sm) {
+    font-size: 15px;
+  }
 }
 
 .container {
