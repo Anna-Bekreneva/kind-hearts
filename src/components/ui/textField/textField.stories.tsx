@@ -16,7 +16,6 @@ const meta = {
     as: {
       options: ['input', 'textarea'],
       control: { type: 'radio' },
-      defaultValue: 'input',
     },
   },
 } satisfies Meta<typeof TextField>

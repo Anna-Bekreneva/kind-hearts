@@ -1,5 +1,6 @@
 import type { Preview } from '@storybook/react'
 import '../src/styles/index.scss'
+import 'storybook-addon-remix-react-router'
 
 const preview: Preview = {
   parameters: {

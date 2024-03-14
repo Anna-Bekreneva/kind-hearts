@@ -11,3 +11,8 @@ export const ButtonVariant = {
   primary: 'primary',
   secondary: 'secondary',
 } as const
+
+export const LogoVariant = {
+  horizontal: 'horizontal',
+  vertical: 'vertical',
+} as const
