@@ -1,9 +1,5 @@
-import { Logo } from '@/components'
+import { HomePage } from '@/pages/home'
 
 export function App() {
-  return (
-    <div>
-      <Logo />
-    </div>
-  )
+  return <HomePage></HomePage>
 }
