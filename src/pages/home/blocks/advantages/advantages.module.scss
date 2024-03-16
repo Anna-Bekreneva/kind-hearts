@@ -18,8 +18,8 @@
 
 .box {
   @include mq(xl, min) {
-    max-width: 1130px;
     width: 100%;
+    max-width: 1130px;
   }
 }
 
@@ -41,8 +41,8 @@
 
 .items {
   display: flex;
-  justify-content: space-between;
   gap: 30px;
+  justify-content: space-between;
 
   /* stylelint-disable-next-line */
   @include mq(sm) {
@@ -58,6 +58,6 @@
 
 .subtitle {
   display: block;
-  color: var(--color-green-400);
   margin-bottom: 10px;
+  color: var(--color-green-400);
 }
