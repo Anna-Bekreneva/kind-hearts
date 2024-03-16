@@ -99,7 +99,7 @@ export const Questions: FC = () => {
   const rightItems = [...questions].splice(leftCount)
 
   return (
-    <section>
+    <section className={'section'}>
       <div className="container">
         <div className={s.wrapper}>
           <Typography as={'h2'} variant={'title'}>
