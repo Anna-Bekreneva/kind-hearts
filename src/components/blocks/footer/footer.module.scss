@@ -1,0 +1,28 @@
+@import '../../../styles/mixins';
+
+.section {
+  padding-bottom: 20px;
+}
+
+.wrapper {
+  @include flex-normal($justify-content: space-between);
+
+  gap: 30px;
+
+  padding: 50px 80px;
+
+  background-color: var(--color-purple-50);
+  border: 1px solid var(--color-purple-100);
+  border-radius: 20px;
+
+  /* stylelint-disable-next-line */
+  @include mq(xl) {
+    padding: 50px 20px;
+  }
+
+  /* stylelint-disable-next-line */
+  @include mq(sm) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

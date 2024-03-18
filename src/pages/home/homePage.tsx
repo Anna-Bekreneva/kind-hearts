@@ -1,11 +1,12 @@
-import { Advantages } from '@/pages'
-import { Questions } from '@/pages/home/blocks/questions'
+import { Footer } from '@/components'
+import { Advantages, Questions } from '@/pages'
 
 export const HomePage = () => {
   return (
     <>
       <Advantages />
       <Questions />
+      <Footer />
     </>
   )
 }

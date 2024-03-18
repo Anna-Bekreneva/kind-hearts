@@ -51,6 +51,9 @@
 }
 
 .item {
+  width: 100%;
+
+  /* stylelint-disable-next-line */
   @include mq(sm, min) {
     max-width: 290px;
   }
