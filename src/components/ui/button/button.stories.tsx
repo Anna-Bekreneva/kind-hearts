@@ -9,7 +9,7 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     variant: {
-      options: Object.values(ButtonVariant),
+      options: ButtonVariant,
       control: { type: 'radio' },
     },
   },

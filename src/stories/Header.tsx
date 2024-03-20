@@ -1,17 +1,6 @@
 import './header.css'
 
-type User = {
-  name: string
-}
-
-interface HeaderProps {
-  onCreateAccount: () => void
-  onLogin: () => void
-  onLogout: () => void
-  user?: User
-}
-
-export const Header = ({ onCreateAccount, onLogin, onLogout, user }: HeaderProps) => (
+export const Header = () => (
   <header>
     <div className={'storybook-header'}>
       <div>

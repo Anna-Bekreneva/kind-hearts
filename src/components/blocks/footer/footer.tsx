@@ -1,5 +1,8 @@
+import { FC } from 'react'
+
 import s from './footer.module.scss'
-export const Footer = () => {
+
+export const Footer: FC = () => {
   return (
     <footer className={`${s.section} section`}>
       <div className="container">

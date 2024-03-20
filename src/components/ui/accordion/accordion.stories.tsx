@@ -18,6 +18,10 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const AccodrionDefault: Story = {
+  args: {
+    type: 'single',
+  },
+
   render: args => {
     const items = [
       {
