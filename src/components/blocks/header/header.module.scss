@@ -2,21 +2,30 @@
 
 .header {
   height: 120px;
+  background-color: var(--color-white);
 }
 
 .fixed {
-  padding: 20px 0;
-  background-color: var(--color-white);
   position: fixed;
-  width: 100%;
   z-index: 2000;
+
+  width: 100%;
+  padding: 20px 0;
+
+  background-color: var(--color-white);
+
+  &[data-open='true'] {
+    padding-bottom: 0;
+  }
 }
 
 .wrapper {
   @include flex-normal($justify-content: space-between);
 
   z-index: 10;
+
   padding: 10px 80px;
+
   background-color: var(--color-purple-50);
   border: 1px solid var(--color-purple-100);
   border-radius: 20px;
@@ -28,26 +37,31 @@
 }
 
 .burgerButton {
+  position: relative;
+
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  background-color: var(--color-yellow-400);
-  position: relative;
-  //z-index: 50;
   margin-left: auto;
+
+  background-color: var(--color-yellow-400);
+  border-radius: 50%;
 
   &::before,
   &::after {
-    position: absolute;
     content: '';
-    height: 1px;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
     width: 18px;
+    height: 1px;
+
     background-color: var(--color-dark-700);
+
     transition:
       transform 0.3s ease-in-out,
       top 0.3s ease-in-out;
-    left: 50%;
-    transform: translateX(-50%);
   }
 
   &::before {
@@ -88,35 +102,37 @@
 }
 
 .burgerLine {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: inline-block;
+
   width: 18px;
   height: 1px;
 
-  top: 50%;
-  position: absolute;
-  left: 50%;
   background-color: var(--color-dark-700);
-  transform: translate(-50%, -50%);
+
   transition: transform 0.3s ease-in-out;
-  display: inline-block;
 }
 
 .menu {
-  @include flex-direction($justify-content: space-between);
-  gap: 40px;
-
   &[data-open='true'] {
     @include mq(lg) {
       position: fixed;
-      right: 0;
-      top: 0;
-      overflow: auto;
-      height: 100vh;
-      display: flex;
-      background-color: var(--color-white);
-      max-width: 320px;
-      width: 100%;
-      padding: 150px 40px 50px;
       z-index: -1;
+      top: 0;
+      right: 0;
+
+      display: flex;
+
+      width: 100%;
+      max-width: 320px;
+      height: 100vh;
+      padding-top: 92px;
+
+      background-color: var(--color-white);
     }
   }
 
@@ -126,14 +142,25 @@
   }
 }
 
-.items {
-  margin-bottom: 48px;
+.menuWrapper {
+  gap: 40px;
 
-  li {
-    &:not(:last-child) {
-      margin-bottom: 20px;
+  &[data-open='true'] {
+    @include mq(lg) {
+      @include flex-direction($justify-content: space-between);
+
+      overflow: auto;
+      width: 100%;
+      height: 100%;
+      padding: 50px 40px;
     }
   }
+}
+
+.items {
+  display: flex;
+  gap: 48px;
+  align-items: center;
 
   /* stylelint-disable-next-line */
   @include mq(lg) {
@@ -143,6 +170,11 @@
 }
 
 .mobile {
+  @include flex-direction;
+
+  gap: 20px;
+
+  /* stylelint-disable-next-line */
   @include mq(lg, min) {
     display: none;
   }
