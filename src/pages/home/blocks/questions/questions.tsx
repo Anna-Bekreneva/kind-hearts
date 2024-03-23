@@ -101,7 +101,7 @@ export const Questions: FC = () => {
   return (
     <section className={'section'}>
       <div className="container">
-        <div className={s.wrapper}>
+        <div className={'section__wrapper'}>
           <Typography as={'h2'} variant={'title'}>
             Frequently asked questions
           </Typography>

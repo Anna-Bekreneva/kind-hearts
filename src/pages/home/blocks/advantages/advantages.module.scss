@@ -4,18 +4,6 @@
   padding-top: 0;
 }
 
-.wrapper {
-  padding: 80px 80px 90px;
-  background-color: var(--color-purple-50);
-  border: 1px solid var(--color-purple-100);
-  border-radius: 20px;
-
-  /* stylelint-disable-next-line */
-  @include mq(xl) {
-    padding: 80px 20px;
-  }
-}
-
 .box {
   @include mq(xl, min) {
     width: 100%;

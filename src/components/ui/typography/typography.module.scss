@@ -7,23 +7,30 @@
 
 .large {
   @include adaptive-value-base('font-size', 70, 36, 1);
-
-  font-size: 70px;
 }
 
 .title {
   @include adaptive-value-base('font-size', 50, 40, 1);
   @include adaptive-value-base('margin-bottom', 40, 30, 1);
+
   letter-spacing: 0.004rem;
 }
 
-.subtitle1 {
+.subtitle1,
+.subtitle2 {
   font-size: 24px;
+
+  /* stylelint-disable-next-line */
+  @include mq(md) {
+    font-size: 20px;
+  }
+}
+
+.subtitle1 {
   font-weight: 600;
 }
 
 .subtitle2 {
-  font-size: 24px;
   line-height: 1.3;
 }
 

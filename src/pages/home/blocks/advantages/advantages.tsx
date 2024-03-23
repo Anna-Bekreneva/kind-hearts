@@ -22,12 +22,12 @@ const advantagesData: AdvantageType[] = [
 
 export const Advantages: FC = () => {
   return (
-    <section className={'section'}>
+    <section className={`${s.section} section`}>
       <Typography as={'h2'} className="sr-only">
         Our advantages
       </Typography>
       <div className="container">
-        <div className={s.wrapper}>
+        <div className={'section__wrapper'}>
           <div className={s.box}>
             <div className={s.text}>
               <Typography variant={TypographyVariant.subtitle2}>
