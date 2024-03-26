@@ -1,6 +1,6 @@
 import img from '../../../../assets/images/img/waysHelp.jpg'
 
-import s from './waysHelp.module.scss'
+import s from './ways-help.module.scss'
 
 import { TypographyVariant } from '@/common'
 import { Typography } from '@/components'

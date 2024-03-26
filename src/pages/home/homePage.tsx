@@ -1,5 +1,5 @@
 import { Footer, Header } from '@/components'
-import { Advantages, Questions, Hero, WaysHelp } from '@/pages'
+import { Advantages, Questions, Hero, WaysHelp, StateSupports } from '@/pages'
 
 export const HomePage = () => {
   return (
@@ -8,6 +8,7 @@ export const HomePage = () => {
       <Hero />
       <Advantages />
       <WaysHelp />
+      <StateSupports />
       <Questions />
       <Footer />
     </>

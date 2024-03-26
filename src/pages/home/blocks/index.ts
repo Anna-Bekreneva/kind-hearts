@@ -1,4 +1,5 @@
 export * from './hero'
 export * from './advantages'
-export * from './waysHelp'
+export * from './ways-help'
+export * from './state-supports'
 export * from './questions'
