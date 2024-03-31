@@ -7,7 +7,7 @@ import { ButtonVariant } from '@/common'
 type Props<T extends ElementType> = {
   as?: T
   variant?: keyof typeof ButtonVariant
-} & ComponentPropsWithoutRef<T>
+}
 
 export const ButtonPolymorph = <T extends ElementType = 'button'>(
   props: Props<T> & Omit<ComponentPropsWithoutRef<T>, keyof Props<T>>,

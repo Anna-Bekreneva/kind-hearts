@@ -1,5 +1,9 @@
 import { HomePage } from '@/pages/home'
 
 export function App() {
-  return <HomePage></HomePage>
+  return (
+    <div className={'wrapper'}>
+      <HomePage />
+    </div>
+  )
 }

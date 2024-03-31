@@ -1,9 +1,8 @@
+import * as process from 'process'
+
 import { FC, memo } from 'react'
 
 import { Link } from 'react-router-dom'
-
-import horizontal from '../../../assets/images/img/logo/logo-horizontal.svg'
-import vertical from '../../../assets/images/img/logo/logo-vertical.svg'
 
 import s from './logo.module.scss'
 
@@ -16,18 +15,21 @@ type Props = {
 export const Logo: FC<Props> = memo(({ to = '/', variant }) => {
   const linkClassName = `${s.logo} ${variant ? s[String(variant)] : s.standard}`
 
+  const logoHorizontal = `${process.env.PUBLIC_URL}/assets/images/logo/logo-horizontal.svg`
+  const logoVertical = `${process.env.PUBLIC_URL}/assets/images/logo/logo-vertical.svg`
+
   return (
     <Link className={linkClassName} to={to}>
       {variant ? (
         <img
           className={s.img}
-          src={`${variant === 'vertical' ? vertical : horizontal}`}
+          src={`${variant === 'vertical' ? logoVertical : logoHorizontal}`}
           alt="logo"
         />
       ) : (
         <picture>
-          <source media="(max-width: 560px)" srcSet={horizontal} />
-          <img className={s.img} src={vertical} alt="logo" />
+          <source media="(max-width: 560px)" srcSet={logoHorizontal} />
+          <img className={s.img} src={logoVertical} alt="logo" />
         </picture>
       )}
     </Link>

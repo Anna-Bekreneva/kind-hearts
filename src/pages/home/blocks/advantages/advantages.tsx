@@ -7,7 +7,7 @@ import { Typography } from '@/components'
 
 const advantagesData: AdvantageType[] = [
   {
-    title: '$ 5 000 ',
+    title: '$&nbsp5&nbsp000&nbsp',
     text: 'raised in 2024',
   },
   {

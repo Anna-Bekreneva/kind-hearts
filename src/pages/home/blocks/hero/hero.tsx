@@ -1,5 +1,4 @@
-import imgMobile from '../../../../assets/images/img/hero/hero-mobile.png'
-import img from '../../../../assets/images/img/hero/hero.png'
+import process from 'process'
 
 import s from './hero.module.scss'
 
@@ -15,16 +14,24 @@ export const Hero = () => {
               Charitable Foundation <br /> «Kind Hearts»
             </Typography>
             <Typography as={'span'} variant={TypographyVariant.subtitle2} className={s.slogan}>
-              Kindness is proof of God
+              Kindness is proof of&nbsp;God
             </Typography>
             <Button className={s.button} as={'a'} href={'#'}>
               Want to help
             </Button>
           </div>
-          <span className={s.img} style={{ backgroundImage: `url(${img})` }} aria-hidden></span>
+          <span
+            className={s.img}
+            style={{
+              backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/hero/hero.png)`,
+            }}
+            aria-hidden
+          ></span>
           <span
             className={`${s.img} ${s.imgMobile}`}
-            style={{ backgroundImage: `url(${imgMobile})` }}
+            style={{
+              backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/hero/hero-mobile.png)`,
+            }}
             aria-hidden
           ></span>
         </div>

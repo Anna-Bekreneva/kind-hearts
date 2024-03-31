@@ -9,7 +9,7 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     variant: {
-      options: ['large', 'title', 'subtitle1', 'subtitle2', 'slogan', 'text'],
+      options: TypographyVariant,
       control: { type: 'radio' },
     },
   },

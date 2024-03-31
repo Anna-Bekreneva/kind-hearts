@@ -14,7 +14,7 @@ export const TypographyPolymorph = <T extends ElementType = 'p'>(
 ) => {
   const { variant = TypographyVariant.text, as: Tag = 'p', className, ...rest } = props
 
-  const typographyClassName = `${s.typography} ${s[String(variant)]} ${className}`
+  const typographyClassName = `${s[String(variant)]} ${className}`
 
   return (
     // @ts-expect-error TS2322

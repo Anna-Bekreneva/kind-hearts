@@ -1,4 +1,4 @@
-import img from '../../../../assets/images/img/waysHelp.jpg'
+import process from 'process'
 
 import s from './ways-help.module.scss'
 
@@ -15,8 +15,9 @@ export const WaysHelp = () => {
             </Typography>
             <div className={s.text}>
               <Typography>
-                We accept any donations of any size: you can bring donations of substances, food,
-                things (from real estate and transportation to children’s toys).
+                We&nbsp;accept any donations of&nbsp;any size: you can bring donations
+                of&nbsp;substances, food, things (from real estate and transportation
+                to&nbsp;children’s&nbsp;toys).
               </Typography>
             </div>
             <div className={s.text}>
@@ -25,12 +26,17 @@ export const WaysHelp = () => {
                 <Typography as={'a'} href={'tel:+17186350030'}>
                   +1 (718) 6 350 030
                 </Typography>{' '}
-                or leave a request on the website.
+                or&nbsp;leave a request on the website.
               </Typography>
             </div>
           </div>
           <div className={s.pictureWrapper} aria-hidden>
-            <div className={s.picture} style={{ backgroundImage: `url(${img})` }}></div>
+            <div
+              className={s.picture}
+              style={{
+                backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/waysHelp.jpg)`,
+              }}
+            ></div>
           </div>
         </div>
       </div>
