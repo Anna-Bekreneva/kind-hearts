@@ -1,9 +1,5 @@
 import { FC, ReactNode } from 'react'
 
-import { v1 } from 'uuid'
-
-import s from './questions.module.scss'
-
 import {
   Accordion,
   AccordionContent,
@@ -11,17 +7,18 @@ import {
   AccordionItem,
   Typography,
 } from '@/components'
+import { v1 } from 'uuid'
+
+import s from './questions.module.scss'
 
 type QuestionType = {
+  content: ReactNode
   id: string
   title: string
-  content: ReactNode
 }
 
 const questions: QuestionType[] = [
   {
-    id: v1(),
-    title: 'Is it possible to make small contributions?',
     content: (
       <p>
         It is a small contribution that speaks of a big heart. Don’t think about the fact that you
@@ -29,10 +26,10 @@ const questions: QuestionType[] = [
         what is a matter of dinner for some is a matter of life for others.
       </p>
     ),
+    id: v1(),
+    title: 'Is it possible to make small contributions?',
   },
   {
-    id: v1(),
-    title: 'What can I donate?',
     content: (
       <p>
         We accept any donations and send them directly to those who need it. We accept large
@@ -40,10 +37,10 @@ const questions: QuestionType[] = [
         and much more.
       </p>
     ),
+    id: v1(),
+    title: 'What can I donate?',
   },
   {
-    id: v1(),
-    title: 'I have a wholesale batch of shoes in my warehouse. Can I donate it to the fund?',
     content: (
       <p>
         Yes, sure! This will be a great help for people in need. Moreover, this will be mutual
@@ -51,10 +48,10 @@ const questions: QuestionType[] = [
         taxes on the donation amount.
       </p>
     ),
+    id: v1(),
+    title: 'I have a wholesale batch of shoes in my warehouse. Can I donate it to the fund?',
   },
   {
-    id: v1(),
-    title: 'How can I reduce taxes on donation amounts?',
     content: (
       <>
         <p>
@@ -68,28 +65,30 @@ const questions: QuestionType[] = [
         </p>
       </>
     ),
+    id: v1(),
+    title: 'How can I reduce taxes on donation amounts?',
   },
   {
-    id: v1(),
-    title: 'There is no my question here. How can I find the answer?',
     content: (
       <p>
         Please write your question to{' '}
-        <a href={'mailto:online@bfkh.ru'} target={'_blank'} rel="noreferrer">
+        <a href={'mailto:online@bfkh.ru'} rel={'noreferrer'} target={'_blank'}>
           online@bfkh.ru
         </a>
       </p>
     ),
+    id: v1(),
+    title: 'There is no my question here. How can I find the answer?',
   },
   {
-    id: v1(),
-    title: 'What other help does the foundation need?',
     content: (
       <p>
         Become a member of our team, wear our merch, subscribe to our social networks, be involved.
         This will be a great help for our foundation.
       </p>
     ),
+    id: v1(),
+    title: 'What other help does the foundation need?',
   },
 ]
 
@@ -100,7 +99,7 @@ export const Questions: FC = () => {
 
   return (
     <section className={'section'}>
-      <div className="container">
+      <div className={'container'}>
         <div className={'section__wrapper'}>
           <Typography as={'h2'} variant={'title'}>
             Frequently asked questions

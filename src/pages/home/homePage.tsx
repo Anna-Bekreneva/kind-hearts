@@ -1,5 +1,5 @@
 import { Footer, Header } from '@/components'
-import { Advantages, Questions, Hero, WaysHelp, StateSupports, Directions } from '@/pages'
+import { Advantages, Directions, Hero, Questions, StateSupports, WaysHelp } from '@/pages'
 
 export const HomePage = () => {
   return (

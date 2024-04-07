@@ -1,22 +1,22 @@
-import * as process from 'process'
-
 import { FC } from 'react'
 
-import s from './directions.module.scss'
-
 import { TypographyVariant } from '@/common'
-import { DirectionPropsType, Typography } from '@/components'
+import { DirectionCard, DirectionPropsType, Typography } from '@/components'
+
+import s from './directions.module.scss'
 
 const directionsData: DirectionPropsType[] = [
   {
     img: {
       alt: 'Helping people',
+      avif: '/assets/images/directions/people/people.avif 1x, /assets/images/directions/people/people@2x.avif 2x',
       loading: 'lazy',
-      src: `${process.env.PUBLIC_URL}/assets/images/directions/people/people.jpg`,
-      avif: `${process.env.PUBLIC_URL}/assets/images/directions/people/people.avif`,
-      webp: `${process.env.PUBLIC_URL}/assets/images/directions/people/people.webp`,
+      src: '/assets/images/directions/people/people.jpg',
+      srcSet:
+        '/assets/images/directions/people/people.jpg 1x, /assets/images/directions/people/people@2x.jpg 2x',
+      webp: '/assets/images/directions/people/people.webp 1x, /assets/images/directions/people/people@2x.webp 2x',
     },
-    title: 'Helping people in need',
+    linkTo: '',
     text: [
       <p>
         Our charitable foundation regularly provides assistance to&nbsp;low-income families
@@ -29,17 +29,19 @@ const directionsData: DirectionPropsType[] = [
         needs help.
       </p>,
     ],
-    linkTo: '',
+    title: 'Helping people in need',
   },
   {
     img: {
       alt: 'Helping people',
+      avif: '/assets/images/directions/animals/animals.avif 1x, /assets/images/directions/animals/animals@2x.avif 2x',
       loading: 'lazy',
-      src: `${process.env.PUBLIC_URL}/assets/images/directions/people/animals.jpg`,
-      avif: `${process.env.PUBLIC_URL}/assets/images/directions/people/animals.avif`,
-      webp: `${process.env.PUBLIC_URL}/assets/images/directions/people/animals.webp`,
+      src: '/assets/images/directions/animals/animals.jpg',
+      srcSet:
+        '/assets/images/directions/animals/animals.jpg 1x, /assets/images/directions/animals/animals@2x.jpg 2x',
+      webp: '/assets/images/directions/animals/animals.webp 1x, /assets/images/directions/animals/animals@2x.webp 2x',
     },
-    title: 'Helping homeless animals',
+    linkTo: '',
     text: [
       <p>
         Every puppy in&nbsp;the shelter needs a&nbsp;home and kind hands. The best thing you can
@@ -52,14 +54,14 @@ const directionsData: DirectionPropsType[] = [
         and food will be&nbsp;transferred to&nbsp;shelters.
       </p>,
     ],
-    linkTo: '',
+    title: 'Helping homeless animals',
   },
 ]
 
 export const Directions: FC = () => {
   return (
     <section className={'section'}>
-      <div className="container">
+      <div className={'container'}>
         <div className={s.header}>
           <div className={s.box}>
             <Typography as={'h2'} variant={TypographyVariant.title}>
@@ -95,7 +97,18 @@ export const Directions: FC = () => {
             </Typography>
           </ul>
         </div>
-        <ul className={s.items}></ul>
+        <ul className={s.items}>
+          {directionsData.map((direction, index) => (
+            <li className={s.item} key={index}>
+              <DirectionCard
+                img={direction.img}
+                linkTo={direction.linkTo}
+                text={direction.text}
+                title={direction.title}
+              />
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   )

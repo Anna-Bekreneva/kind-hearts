@@ -1,13 +1,11 @@
-import process from 'process'
-
-import s from './ways-help.module.scss'
-
 import { TypographyVariant } from '@/common'
 import { Typography } from '@/components'
+
+import s from './ways-help.module.scss'
 export const WaysHelp = () => {
   return (
-    <section className="section">
-      <div className="container">
+    <section className={'section'}>
+      <div className={'container'}>
         <div className={s.wrapper}>
           <div className={s.content}>
             <Typography as={'h2'} variant={TypographyVariant.title}>
@@ -24,17 +22,17 @@ export const WaysHelp = () => {
               <Typography variant={TypographyVariant.subtitle1}>
                 To help the fund, contact our manager at{' '}
                 <Typography as={'a'} href={'tel:+17186350030'}>
-                  +1 (718) 6 350 030
+                  +1&nbsp;(718) 6&nbsp;350&nbsp;030
                 </Typography>{' '}
                 or&nbsp;leave a request on the website.
               </Typography>
             </div>
           </div>
-          <div className={s.pictureWrapper} aria-hidden>
+          <div aria-hidden className={s.pictureWrapper}>
             <div
               className={s.picture}
               style={{
-                backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/waysHelp.jpg)`,
+                backgroundImage: 'url(/assets/images/waysHelp.jpg)',
               }}
             ></div>
           </div>

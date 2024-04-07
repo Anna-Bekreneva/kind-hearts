@@ -1,8 +1,8 @@
 import { ComponentPropsWithoutRef, ElementRef, ElementType, ForwardedRef, forwardRef } from 'react'
 
-import s from './button.module.scss'
-
 import { ButtonVariant } from '@/common'
+
+import s from './button.module.scss'
 
 type Props<T extends ElementType> = {
   as?: T
@@ -13,7 +13,7 @@ export const ButtonPolymorph = <T extends ElementType = 'button'>(
   props: Props<T> & Omit<ComponentPropsWithoutRef<T>, keyof Props<T>>,
   ref: ElementRef<T>
 ) => {
-  const { variant = ButtonVariant.primary, as: Tag = 'button', className, ...rest } = props
+  const { as: Tag = 'button', className, variant = ButtonVariant.primary, ...rest } = props
 
   const buttonClassName = `${s.button} ${s[String(variant)]} ${className}`
 

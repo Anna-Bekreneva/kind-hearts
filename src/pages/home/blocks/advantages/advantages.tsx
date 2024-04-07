@@ -1,32 +1,32 @@
 import { FC } from 'react'
 
-import s from './advantages.module.scss'
-
 import { TypographyVariant } from '@/common'
 import { Typography } from '@/components'
 
+import s from './advantages.module.scss'
+
 const advantagesData: AdvantageType[] = [
   {
-    title: '$&nbsp5&nbsp000&nbsp',
     text: 'raised in 2024',
+    title: `$5000`,
   },
   {
-    title: '24',
     text: 'people received help thanks to you',
+    title: '24',
   },
   {
-    title: '13',
     text: 'months of saving animals together',
+    title: '13',
   },
 ]
 
 export const Advantages: FC = () => {
   return (
     <section className={`${s.section} section`}>
-      <Typography as={'h2'} className="sr-only">
+      <Typography as={'h2'} className={'sr-only'}>
         Our advantages
       </Typography>
-      <div className="container">
+      <div className={'container'}>
         <div className={'section__wrapper'}>
           <div className={s.box}>
             <div className={s.text}>
@@ -37,8 +37,8 @@ export const Advantages: FC = () => {
             </div>
             <ul className={s.items}>
               {advantagesData.map((advantage, index) => (
-                <li key={index} className={s.item}>
-                  <Advantage title={advantage.title} text={advantage.text} />
+                <li className={s.item} key={index}>
+                  <Advantage text={advantage.text} title={advantage.title} />
                 </li>
               ))}
             </ul>
@@ -50,13 +50,13 @@ export const Advantages: FC = () => {
 }
 
 type AdvantageType = {
-  title: string
   text: string
+  title: string
 }
-const Advantage: FC<AdvantageType> = ({ title, text }) => {
+const Advantage: FC<AdvantageType> = ({ text, title }) => {
   return (
     <>
-      <Typography variant={TypographyVariant.title} as={'span'} className={s.subtitle}>
+      <Typography as={'span'} className={s.subtitle} variant={TypographyVariant.title}>
         {title}
       </Typography>
       <Typography as={'span'} className={s.subtext}>

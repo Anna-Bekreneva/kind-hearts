@@ -14,7 +14,7 @@ import s from './accordion.module.scss'
 
 type AccordionPropsType = {
   className?: string
-} & (AccordionSingleProps | AccordionMultipleProps)
+} & (AccordionMultipleProps | AccordionSingleProps)
 
 export const Accordion: FC<AccordionPropsType> = ({ className, ...rest }): JSX.Element => {
   return <AccordionRadix.Root className={className} {...rest} />
@@ -30,7 +30,7 @@ export const AccordionItem: FC<AccordionItemPropsType> = ({ className, value, ..
 type AccordionHeaderPropsType = {
   className?: string
 } & AccordionHeaderProps
-export const AccordionHeader: FC<AccordionHeaderPropsType> = ({ className, children, ...rest }) => {
+export const AccordionHeader: FC<AccordionHeaderPropsType> = ({ children, className, ...rest }) => {
   return (
     <AccordionRadix.Header className={className} {...rest}>
       <AccordionRadix.Trigger className={s.trigger}>{children}</AccordionRadix.Trigger>
@@ -42,8 +42,8 @@ type AccordionContentPropsType = {
   className?: string
 } & AccordionContentProps
 export const AccordionContent: FC<AccordionContentPropsType> = ({
-  className,
   children,
+  className,
   ...rest
 }) => {
   return (

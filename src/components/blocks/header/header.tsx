@@ -1,11 +1,10 @@
 import { FC, useEffect, useRef, useState } from 'react'
-
 import { Link } from 'react-router-dom'
-
-import s from './header.module.scss'
 
 import { TypographyVariant } from '@/common'
 import { Logo, Typography } from '@/components'
+
+import s from './header.module.scss'
 
 const menu: Omit<MenuItemType, 'callback'>[] = [
   { text: 'What we do', to: '' },
@@ -17,8 +16,8 @@ const menu: Omit<MenuItemType, 'callback'>[] = [
 
 export const Header: FC = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false)
-  const menuWrapperRef = useRef<null | HTMLDivElement>(null)
-  const burgerButtonRef = useRef<null | HTMLButtonElement>(null)
+  const menuWrapperRef = useRef<HTMLDivElement | null>(null)
+  const burgerButtonRef = useRef<HTMLButtonElement | null>(null)
 
   useEffect(() => {
     const body = document.querySelector('body')
@@ -47,20 +46,20 @@ export const Header: FC = () => {
 
   return (
     <header className={s.header}>
-      {isOpenMenu && <div className={'overlay'} aria-hidden></div>}
+      {isOpenMenu && <div aria-hidden className={'overlay'}></div>}
       <div className={s.fixed} data-open={isOpenMenu}>
-        <div className="container">
+        <div className={'container'}>
           <nav className={s.wrapper}>
             <Logo />
             <button
-              className={s.burgerButton}
-              id={'burger-button'}
-              type={'button'}
-              ref={burgerButtonRef}
-              onClick={() => setIsOpenMenu(!isOpenMenu)}
-              data-open={isOpenMenu}
               aria-controls={'burger-menu'}
               aria-expanded={isOpenMenu}
+              className={s.burgerButton}
+              data-open={isOpenMenu}
+              id={'burger-button'}
+              onClick={() => setIsOpenMenu(!isOpenMenu)}
+              ref={burgerButtonRef}
+              type={'button'}
             >
               <span className={s.burgerLine}></span>
               <span className={'sr-only'}>{isOpenMenu ? 'Close menu' : 'Open menu'}</span>
@@ -68,40 +67,40 @@ export const Header: FC = () => {
 
             <div
               className={s.menu}
-              id={'burger-menu'}
               data-open={isOpenMenu}
+              id={'burger-menu'}
               ref={menuWrapperRef}
-              role="menu"
+              role={'menu'}
             >
               <div className={s.menuWrapper} data-open={isOpenMenu}>
                 <ul className={s.items}>
                   {menu.map((item, index) => (
                     <MenuItem
-                      key={index}
-                      to={item.to}
-                      text={item.text}
                       callback={() => setIsOpenMenu(false)}
+                      key={index}
+                      text={item.text}
+                      to={item.to}
                     />
                   ))}
                 </ul>
                 <ul className={s.mobile}>
                   <li>
                     <Typography
-                      variant={TypographyVariant.subtitle1}
                       as={'a'}
                       href={'tel:+17186350030'}
                       role={'menuitem'}
+                      variant={TypographyVariant.subtitle1}
                     >
                       +1 (718) 6350030
                     </Typography>
                   </li>
                   <li>
                     <Typography
-                      variant={TypographyVariant.subtitle1}
                       as={'a'}
                       href={'#'}
-                      target="_blank"
                       role={'menuitem'}
+                      target={'_blank'}
+                      variant={TypographyVariant.subtitle1}
                     >
                       Instagram
                     </Typography>
@@ -117,15 +116,15 @@ export const Header: FC = () => {
 }
 
 type MenuItemType = {
+  callback: () => void
   text: string
   to: string
-  callback: () => void
 }
 
-const MenuItem: FC<MenuItemType> = ({ text, to, callback }) => {
+const MenuItem: FC<MenuItemType> = ({ callback, text, to }) => {
   return (
     <li>
-      <Link onClick={callback} to={to} role={'menuitem'}>
+      <Link onClick={callback} role={'menuitem'} to={to}>
         {text}
       </Link>
     </li>

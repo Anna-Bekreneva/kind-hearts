@@ -1,18 +1,17 @@
-import { Meta, StoryObj } from '@storybook/react'
-
 import { TypographyVariant } from '@/common'
 import { Typography } from '@/components'
+import { Meta, StoryObj } from '@storybook/react'
 
 const meta = {
-  title: 'Components/ui/Typography',
-  component: Typography,
-  tags: ['autodocs'],
   argTypes: {
     variant: {
-      options: TypographyVariant,
       control: { type: 'radio' },
+      options: TypographyVariant,
     },
   },
+  component: Typography,
+  tags: ['autodocs'],
+  title: 'Components/ui/Typography',
 } satisfies Meta<typeof Typography>
 
 export default meta
@@ -20,40 +19,40 @@ type Story = StoryObj<typeof meta>
 
 export const Large: Story = {
   args: {
-    variant: TypographyVariant.large,
-    children: 'Typography large',
     as: 'h1',
+    children: 'Typography large',
+    variant: TypographyVariant.large,
   },
 }
 
 export const Title: Story = {
   args: {
-    variant: TypographyVariant.title,
-    children: 'Typography title',
     as: 'h2',
+    children: 'Typography title',
+    variant: TypographyVariant.title,
   },
 }
 
 export const Subtitle1: Story = {
   args: {
-    variant: TypographyVariant.subtitle1,
-    children: 'Typography subtitle 1',
     as: 'h3',
+    children: 'Typography subtitle 1',
+    variant: TypographyVariant.subtitle1,
   },
 }
 
 export const Subtitle2: Story = {
   args: {
-    variant: TypographyVariant.subtitle2,
-    children: 'Typography subtitle 2',
     as: 'h3',
+    children: 'Typography subtitle 2',
+    variant: TypographyVariant.subtitle2,
   },
 }
 
 export const Slogan: Story = {
   args: {
-    variant: TypographyVariant.text,
-    children: 'Typography text',
     as: 'p',
+    children: 'Typography text',
+    variant: TypographyVariant.text,
   },
 }

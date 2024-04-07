@@ -1,8 +1,8 @@
 import { ComponentPropsWithoutRef, ElementRef, ElementType, ForwardedRef, forwardRef } from 'react'
 
-import s from './typography.module.scss'
-
 import { TypographyVariant } from '@/common'
+
+import s from './typography.module.scss'
 
 type Props<T extends ElementType = 'p'> = {
   as?: T
@@ -12,7 +12,7 @@ export const TypographyPolymorph = <T extends ElementType = 'p'>(
   props: Props<T> & Omit<ComponentPropsWithoutRef<T>, keyof Props<T>>,
   ref: ElementRef<T>
 ) => {
-  const { variant = TypographyVariant.text, as: Tag = 'p', className, ...rest } = props
+  const { as: Tag = 'p', className, variant = TypographyVariant.text, ...rest } = props
 
   const typographyClassName = `${s[String(variant)]} ${className}`
 

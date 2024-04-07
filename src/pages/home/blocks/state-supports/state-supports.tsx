@@ -1,7 +1,7 @@
-import s from './state-supports.module.scss'
-
 import { TypographyVariant } from '@/common'
 import { Typography } from '@/components'
+
+import s from './state-supports.module.scss'
 
 export const StateSupports = () => {
   return (
@@ -13,7 +13,7 @@ export const StateSupports = () => {
               <Typography as={'span'} variant={TypographyVariant.large}>
                 $ 100
               </Typography>
-              <Typography className={s.subtext} as={'span'} variant={TypographyVariant.title}>
+              <Typography as={'span'} className={s.subtext} variant={TypographyVariant.title}>
                 donate
               </Typography>
             </div>
@@ -21,7 +21,7 @@ export const StateSupports = () => {
               <Typography as={'span'} variant={TypographyVariant.large}>
                 - $ 100
               </Typography>
-              <Typography className={s.subtext} as={'span'} variant={TypographyVariant.title}>
+              <Typography as={'span'} className={s.subtext} variant={TypographyVariant.title}>
                 tax free
               </Typography>
             </div>

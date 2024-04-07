@@ -1,21 +1,20 @@
+import { LogoVariant } from '@/common'
+import { Logo } from '@/components'
 import { StoryObj } from '@storybook/react'
 import { withRouter } from 'storybook-addon-remix-react-router'
 
-import { LogoVariant } from '@/common'
-import { Logo } from '@/components'
-
 const meta = {
-  title: 'Components/ui/Logo',
-  component: Logo,
-  tags: ['autodocs'],
   argTypes: {
+    to: { default: '/', type: 'string' },
     variant: {
-      options: Object.values(LogoVariant),
       control: { type: 'radio' },
+      options: Object.values(LogoVariant),
     },
-    to: { type: 'string', default: '/' },
   },
+  component: Logo,
   decorators: [withRouter],
+  tags: ['autodocs'],
+  title: 'Components/ui/Logo',
 }
 
 export default meta

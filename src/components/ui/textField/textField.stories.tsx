@@ -1,23 +1,22 @@
 import { useState } from 'react'
 
+import { TextField } from '@/components'
 import { action } from '@storybook/addon-actions'
 import { Meta, StoryObj } from '@storybook/react'
 
-import { TextField } from '@/components'
-
 const meta = {
-  title: 'Components/ui/TextField',
+  argTypes: {
+    as: {
+      control: { type: 'radio' },
+      options: ['input', 'textarea'],
+    },
+    disabled: { type: 'boolean' },
+    errorMessage: { type: 'string' },
+    placeholder: { type: 'string' },
+  },
   component: TextField,
   tags: ['autodocs'],
-  argTypes: {
-    errorMessage: { type: 'string' },
-    disabled: { type: 'boolean' },
-    placeholder: { type: 'string' },
-    as: {
-      options: ['input', 'textarea'],
-      control: { type: 'radio' },
-    },
-  },
+  title: 'Components/ui/TextField',
 } satisfies Meta<typeof TextField>
 
 export default meta
@@ -36,8 +35,8 @@ export const InputDefault: Story = {
       <TextField
         placeholder={'placeholder'}
         {...args}
-        value={value}
         onValueChange={changeHandler}
+        value={value}
       />
     )
   },
@@ -57,8 +56,8 @@ export const TextareaDefault: Story = {
         as={'textarea'}
         placeholder={'placeholder'}
         {...args}
-        value={value}
         onValueChange={changeHandler}
+        value={value}
       />
     )
   },
@@ -77,8 +76,8 @@ export const InputWithError: Story = {
       <TextField
         placeholder={'placeholder'}
         {...args}
-        value={value}
         onValueChange={changeHandler}
+        value={value}
       />
     )
   },
