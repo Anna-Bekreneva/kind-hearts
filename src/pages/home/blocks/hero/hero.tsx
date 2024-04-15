@@ -6,7 +6,7 @@ export const Hero = () => {
   return (
     <section className={`${s.section} section`}>
       <div className={'container'}>
-        <div className={`${s.wrapper} section__wrapper`}>
+        <div className={s.wrapper}>
           <div className={s.content}>
             <Typography as={'h1'} className={s.title} variant={TypographyVariant.large}>
               Charitable Foundation <br /> «Kind Hearts»

@@ -5,6 +5,7 @@
 }
 
 .wrapper {
+  @include section-wrapper;
   @include flex-normal($justify-content: space-between);
 
   gap: 30px;

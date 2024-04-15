@@ -5,6 +5,8 @@
 }
 
 .wrapper {
+  @include section-wrapper;
+
   position: relative;
 
   overflow: hidden;
