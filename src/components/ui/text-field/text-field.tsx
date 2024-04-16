@@ -2,14 +2,14 @@ import { ComponentPropsWithoutRef, ElementType, memo, useState } from 'react'
 
 import { AlertIcon, Typography } from '@/components'
 
-import s from './textField.module.scss'
+import s from './text-field.module.scss'
 
-type Props<T extends ElementType> = {
+export type TextFieldProps<T extends ElementType> = {
   as?: T
   errorMessage?: string
   onValueChange?: (value: string) => void
 } & ComponentPropsWithoutRef<T>
-export const TextField = memo(<T extends ElementType = 'input'>(props: Props<T>) => {
+export const TextField = memo(<T extends ElementType = 'input'>(props: TextFieldProps<T>) => {
   const { as: Tag = 'input', className, errorMessage, onValueChange, ...rest } = props
 
   const [isShowError, setIsShowError] = useState(false)

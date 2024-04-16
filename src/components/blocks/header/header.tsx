@@ -1,8 +1,8 @@
-import { FC, useEffect, useRef, useState } from 'react'
+import { FC } from 'react'
 import { Link } from 'react-router-dom'
 
 import { TypographyVariant } from '@/common'
-import { Logo, Typography } from '@/components'
+import { Logo, Typography, useHeader } from '@/components'
 
 import s from './header.module.scss'
 
@@ -15,34 +15,7 @@ const menu: Omit<MenuItemType, 'callback'>[] = [
 ]
 
 export const Header: FC = () => {
-  const [isOpenMenu, setIsOpenMenu] = useState(false)
-  const menuWrapperRef = useRef<HTMLDivElement | null>(null)
-  const burgerButtonRef = useRef<HTMLButtonElement | null>(null)
-
-  useEffect(() => {
-    const body = document.querySelector('body')
-
-    if (isOpenMenu) {
-      body?.classList.add('disable-scroll')
-    } else {
-      body?.classList.remove('disable-scroll')
-    }
-  }, [isOpenMenu])
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        !menuWrapperRef.current?.contains(event.target as Node) &&
-        !burgerButtonRef.current?.contains(event.target as Node)
-      ) {
-        setIsOpenMenu(false)
-      }
-    }
-
-    document.addEventListener('mousedown', handleClickOutside)
-
-    return () => document.removeEventListener('mousedown', handleClickOutside)
-  }, [isOpenMenu])
+  const { burgerButtonRef, isOpenMenu, menuWrapperRef, setIsOpenMenu } = useHeader()
 
   return (
     <header className={s.header}>

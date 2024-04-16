@@ -1,5 +1,14 @@
 import { Footer, Header } from '@/components'
-import { Advantages, Cases, Directions, Hero, Questions, StateSupports, WaysHelp } from '@/pages'
+import {
+  Advantages,
+  Cases,
+  Consultation,
+  Directions,
+  Hero,
+  Questions,
+  StateSupports,
+  WaysHelp,
+} from '@/pages'
 
 export const HomePage = () => {
   return (
@@ -12,6 +21,7 @@ export const HomePage = () => {
       <Cases />
       <StateSupports />
       <Questions />
+      <Consultation />
       <Footer />
     </>
   )
