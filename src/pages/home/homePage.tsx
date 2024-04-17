@@ -3,6 +3,7 @@ import {
   Advantages,
   Cases,
   Consultation,
+  Contacts,
   Directions,
   Hero,
   Questions,
@@ -22,6 +23,7 @@ export const HomePage = () => {
       <StateSupports />
       <Questions />
       <Consultation />
+      <Contacts />
       <Footer />
     </>
   )
