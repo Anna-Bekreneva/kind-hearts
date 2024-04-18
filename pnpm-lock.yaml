@@ -61,6 +61,9 @@ devDependencies:
   '@storybook/addon-onboarding':
     specifier: ^8.0.4
     version: 8.0.6
+  '@storybook/addon-toolbars':
+    specifier: ^8.0.8
+    version: 8.0.8
   '@storybook/blocks':
     specifier: ^8.0.4
     version: 8.0.6(@types/react@18.2.74)(react-dom@18.2.0)(react@18.2.0)
@@ -2650,6 +2653,10 @@ packages:
 
   /@storybook/addon-toolbars@8.0.6:
     resolution: {integrity: sha512-g4GjrMEHKOIQVwG1DKUHBAn4B8xmdqlxFlVusOrYD9FVfakgMNllN6WBc02hg/IiuzqIDxVK5BXiY9MbXnoguQ==}
+    dev: true
+
+  /@storybook/addon-toolbars@8.0.8:
+    resolution: {integrity: sha512-PZxlK+/Fwk2xcrpr5kkXYjCbBaEjAWcEHWq7mhQReMFaAs5AJE8dvmeQ7rmPDOHnlg4+YsARDFKz5FJtthRIgg==}
     dev: true
 
   /@storybook/addon-viewport@8.0.6:
