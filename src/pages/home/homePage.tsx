@@ -15,15 +15,17 @@ export const HomePage = () => {
   return (
     <>
       <Header />
-      <Hero />
-      <Advantages />
-      <Directions />
-      <WaysHelp />
-      <Cases />
-      <StateSupports />
-      <Questions />
-      <Consultation />
-      <Contacts />
+      <main className={'main'}>
+        <Hero />
+        <Advantages />
+        <Directions />
+        <WaysHelp />
+        <Cases />
+        <StateSupports />
+        <Questions />
+        <Consultation />
+        <Contacts />
+      </main>
       <Footer />
     </>
   )
