@@ -22,7 +22,7 @@ const advantagesData: AdvantageType[] = [
 
 export const Advantages: FC = () => {
   return (
-    <section className={`${s.section} section`}>
+    <section className={`section ${s.section}`}>
       <Typography as={'h2'} className={'sr-only'}>
         Our advantages
       </Typography>
@@ -32,7 +32,7 @@ export const Advantages: FC = () => {
             <div className={s.text}>
               <Typography variant={TypographyVariant.subtitle2}>
                 The Charitable Foundation «Kind Hearts» was created to provide assistance to people
-                in need and homeless animals.
+                in&nbsp;need and homeless animals.
               </Typography>
             </div>
             <ul className={s.items}>

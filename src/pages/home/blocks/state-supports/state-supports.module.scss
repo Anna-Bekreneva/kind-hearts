@@ -21,7 +21,8 @@
 }
 
 .illustration {
-  @include flex-direction($align-items: flex-start, $justify-content: space-evenly);
+  display: flex;
+  justify-content: space-evenly;
 
   aspect-ratio: 1 / 1;
   width: 100%;
@@ -36,11 +37,26 @@
   }
 }
 
+.cards {
+  @include flex-direction($align-items: flex-start, $justify-content: center);
+
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+
+  /* stylelint-disable-next-line */
+  @include mq(sm, min) {
+    padding: 0 20px;
+  }
+}
+
 .card {
   @include flex-direction($align-items: flex-start, $justify-content: flex-start);
+  @include adaptive-value-base('max-width', 330, 220, 1);
 
   gap: 10px;
 
+  width: 100%;
   padding: 30px 50px;
 
   background-color: var(--color-green-50);

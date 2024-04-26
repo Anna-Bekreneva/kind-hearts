@@ -1,7 +1,7 @@
 import { FC } from 'react'
 
 import { TypographyVariant } from '@/common'
-import { CaseCard, CaseType, Typography } from '@/components'
+import { CaseCard, Typography } from '@/components'
 import { A11y, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -12,96 +12,84 @@ import 'swiper/css/pagination'
 
 import s from './cases.module.scss'
 
-const dataCases: CaseType[] = [
+type DataCasesType = {
+  alt: string
+  basePath: string
+  date: string
+  dateTime: string
+  title: string
+}
+
+const dataCases: DataCasesType[] = [
   {
     alt: 'Charity Day',
-    avif: '/assets/images/cases/1.avif',
+    basePath: '/assets/images/cases/1',
     date: 'June 2023',
     dateTime: '2023-06',
-    src: '/assets/images/cases/1.jpg',
     title: 'Charity Day,',
-    webp: '/assets/images/cases/1.webp',
   },
   {
     alt: 'Charity Day',
-    avif: '/assets/images/cases/2.avif',
+    basePath: '/assets/images/cases/2',
     date: 'June 2023',
     dateTime: '2023-06',
-    src: '/assets/images/cases/2.jpg',
     title: 'Charity Day,',
-    webp: '/assets/images/cases/2.webp',
   },
   {
     alt: 'Charity Day',
-    avif: '/assets/images/cases/3.avif',
+    basePath: '/assets/images/cases/3',
     date: 'June 2023',
     dateTime: '2023-06',
-    src: '/assets/images/cases/3.jpg',
     title: 'Charity Day,',
-    webp: '/assets/images/cases/3.webp',
   },
   {
     alt: 'Charity Day',
-    avif: '/assets/images/cases/4.avif',
+    basePath: '/assets/images/cases/4',
     date: 'June 2023',
     dateTime: '2023-06',
-    src: '/assets/images/cases/4.jpg',
     title: 'Charity Day,',
-    webp: '/assets/images/cases/4.webp',
   },
   {
     alt: 'Collecting food for refugees',
-    avif: '/assets/images/cases/5.avif',
+    basePath: '/assets/images/cases/5',
     date: 'August 2023',
     dateTime: '2023-08',
-    src: '/assets/images/cases/5.jpg',
     title: `Collecting food for\u00A0refugees,`,
-    webp: '/assets/images/cases/5.webp',
   },
   {
     alt: 'Collecting food for refugees',
-    avif: '/assets/images/cases/6.avif',
+    basePath: '/assets/images/cases/6',
     date: 'August 2023',
     dateTime: '2023-08',
-    src: '/assets/images/cases/6.jpg',
     title: 'Collecting food for\u00A0refugees,',
-    webp: '/assets/images/cases/6.webp',
   },
   {
     alt: 'Collecting food for refugees',
-    avif: '/assets/images/cases/7.avif',
+    basePath: '/assets/images/cases/7',
     date: 'September 2023',
     dateTime: '2023-09',
-    src: '/assets/images/cases/7.jpg',
     title: 'Collecting food for\u00A0refugees,',
-    webp: '/assets/images/cases/7.webp',
   },
   {
     alt: 'Shelter pet day',
-    avif: '/assets/images/cases/8.avif',
+    basePath: '/assets/images/cases/8',
     date: 'April 2023',
     dateTime: '2023-04',
-    src: '/assets/images/cases/8.jpg',
     title: 'Shelter pet day,',
-    webp: '/assets/images/cases/8.webp',
   },
   {
     alt: 'Shelter pet day',
-    avif: '/assets/images/cases/9.avif',
+    basePath: '/assets/images/cases/9',
     date: 'April 2023',
     dateTime: '2023-04',
-    src: '/assets/images/cases/9.jpg',
     title: 'Shelter pet day,',
-    webp: '/assets/images/cases/9.webp',
   },
   {
     alt: 'Shelter pet day',
-    avif: '/assets/images/cases/10.avif',
+    basePath: '/assets/images/cases/10',
     date: 'April 2023',
     dateTime: '2023-04',
-    src: '/assets/images/cases/10.jpg',
     title: 'Shelter pet day,',
-    webp: '/assets/images/cases/10.webp',
   },
 ]
 
@@ -130,12 +118,15 @@ export const Cases: FC = () => {
               <SwiperSlide key={index}>
                 <CaseCard
                   alt={item.alt}
-                  avif={item.avif}
+                  avif={`${item.basePath}.avif 1x, ${item.basePath}@2x.avif 2x`}
+                  date={item.date}
+                  dateTime={item.dateTime}
                   height={500}
                   loading={'lazy'}
-                  src={item.src}
+                  src={`${item.basePath}.jpg`}
+                  srcSet={`${item.basePath}@2x.jpg`}
                   title={item.title}
-                  webp={item.webp}
+                  webp={`${item.basePath}.webp 1x, ${item.basePath}@2x.webp 2x`}
                   width={610}
                 />
               </SwiperSlide>

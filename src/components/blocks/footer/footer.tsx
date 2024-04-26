@@ -8,7 +8,9 @@ export const Footer: FC = () => {
       <div className={'container'}>
         <div className={s.wrapper}>
           <span>© Kind Hearts 2024</span>
-          <a href={'#'}>Instagram</a>
+          <a href={'https://www.instagram.com/kindheartsfound?igsh=MXRyMDJ6M3ZycnducQ%3D%3D'}>
+            Instagram
+          </a>
           <a href={'#'}>Privacy Policy</a>
         </div>
       </div>

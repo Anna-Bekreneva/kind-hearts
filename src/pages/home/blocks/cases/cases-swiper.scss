@@ -70,15 +70,10 @@
   .swiper-pagination-bullets {
     @include flex-normal;
 
-    top: unset;
-    right: unset;
-    bottom: unset;
-    left: unset;
-
+    inset: unset;
     gap: 10px;
-
     width: 100% !important;
-    height: 14px;
+    height: 16px;
   }
 
   .swiper-pagination-bullet {
