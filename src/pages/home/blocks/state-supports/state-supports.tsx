@@ -9,21 +9,23 @@ export const StateSupports = () => {
       <div className={'container'}>
         <div className={s.wrapper}>
           <div className={s.illustration}>
-            <div className={s.card}>
-              <Typography as={'span'} variant={TypographyVariant.large}>
-                $ 100
-              </Typography>
-              <Typography as={'span'} className={s.subtext} variant={TypographyVariant.title}>
-                donate
-              </Typography>
-            </div>
-            <div className={s.card}>
-              <Typography as={'span'} variant={TypographyVariant.large}>
-                - $ 100
-              </Typography>
-              <Typography as={'span'} className={s.subtext} variant={TypographyVariant.title}>
-                tax free
-              </Typography>
+            <div className={s.cards}>
+              <div className={s.card}>
+                <Typography as={'span'} variant={TypographyVariant.large}>
+                  $ 100
+                </Typography>
+                <Typography as={'span'} className={s.subtext} variant={TypographyVariant.title}>
+                  donate
+                </Typography>
+              </div>
+              <div className={s.card}>
+                <Typography as={'span'} variant={TypographyVariant.large}>
+                  - $ 100
+                </Typography>
+                <Typography as={'span'} className={s.subtext} variant={TypographyVariant.title}>
+                  tax free
+                </Typography>
+              </div>
             </div>
           </div>
           <div className={s.content}>

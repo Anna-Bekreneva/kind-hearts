@@ -1,8 +1,8 @@
 @import '../../../styles/mixins';
 
 .section {
-  padding-bottom: 20px;
   flex: 0 0 auto;
+  padding-bottom: 20px !important;
 }
 
 .wrapper {

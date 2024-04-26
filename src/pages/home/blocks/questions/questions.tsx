@@ -55,12 +55,12 @@ const questions: QuestionType[] = [
     content: (
       <>
         <p>
-          A. Call us and get a full consultation from the accountant about the possibility of
-          writing off tax payments on the donation amount.
+          A. Call us and get a full consultation from the accountant about the possibility
+          of&nbsp;writing off tax payments on the donation amount.
         </p>
         <p>
-          B. Come to our office at 64–05 Yellowstone Blvd Forest Hills 11375 Queens. After making a
-          charitable contribution, you will receive official documentation of the donation amount
+          B. Come to our office at 77 Bowery, New York, NY&nbsp;10 002, 8th&nbsp;floor. After making
+          a charitable contribution, you will receive official documentation of the donation amount
           and will be able to use these documents on your tax return.
         </p>
       </>
@@ -72,8 +72,8 @@ const questions: QuestionType[] = [
     content: (
       <p>
         Please write your question to{' '}
-        <a href={'mailto:online@bfkh.ru'} rel={'noreferrer'} target={'_blank'}>
-          online@bfkh.ru
+        <a href={'mailto:khertscharity@gmail.com'} rel={'noreferrer'} target={'_blank'}>
+          khertscharity@gmail.com
         </a>
       </p>
     ),

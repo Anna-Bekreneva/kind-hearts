@@ -4,7 +4,7 @@ import { Button, Typography } from '@/components'
 import s from './hero.module.scss'
 export const Hero = () => {
   return (
-    <section className={`${s.section} section`}>
+    <section className={s.section}>
       <div className={'container'}>
         <div className={s.wrapper}>
           <div className={s.content}>

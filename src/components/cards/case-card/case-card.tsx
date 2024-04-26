@@ -17,7 +17,11 @@ export const CaseCard: FC<CaseType> = ({ className, date, dateTime, title, ...re
       <Picture className={s.img} {...rest} />
       <Typography as={'h3'} className={s.title} variant={TypographyVariant.subtitle1}>
         {title}
-        {date && <time dateTime={dateTime}>{date}</time>}
+        {date && (
+          <time className={s.date} dateTime={dateTime}>
+            {date}
+          </time>
+        )}
       </Typography>
     </article>
   )

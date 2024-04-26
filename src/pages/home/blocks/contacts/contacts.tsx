@@ -44,8 +44,8 @@ const dataContacts: ContactsCardType[] = [
     title: 'E-mail us',
   },
   {
-    href: 'tel:+17327886611',
-    link: '+1 (732) 7886611',
+    href: 'https://www.instagram.com/kindheartsfound?igsh=MXRyMDJ6M3ZycnducQ%3D%3D',
+    link: 'Instagram',
     title: 'Follow us\u00A0on\u00A0social media',
   },
 ]

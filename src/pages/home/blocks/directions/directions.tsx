@@ -60,7 +60,7 @@ const directionsData: DirectionPropsType[] = [
 
 export const Directions: FC = () => {
   return (
-    <section className={'section'}>
+    <section className={s.section}>
       <div className={'container'}>
         <div className={s.header}>
           <div className={s.box}>

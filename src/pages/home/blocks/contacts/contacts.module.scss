@@ -30,7 +30,7 @@
 }
 
 .map {
-  @include adaptive-value-base('min-height', 810, 450, 1);
+  @include adaptive-value-base('min-height', 664, 450, 1);
 
   border: 1px solid var(--color-purple-100);
   border-radius: 20px;

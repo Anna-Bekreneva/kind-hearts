@@ -1,8 +1,10 @@
+import { FC } from 'react'
+
 import { TypographyVariant } from '@/common'
 import { Typography } from '@/components'
 
 import s from './ways-help.module.scss'
-export const WaysHelp = () => {
+export const WaysHelp: FC = () => {
   return (
     <section className={'section'}>
       <div className={'container'}>
@@ -21,7 +23,7 @@ export const WaysHelp = () => {
             <div className={s.text}>
               <Typography variant={TypographyVariant.subtitle1}>
                 To help the fund, contact our manager at{' '}
-                <Typography as={'a'} href={'tel:+17186350030'}>
+                <Typography as={'a'} className={s.link} href={'tel:+17186350030'}>
                   +1&nbsp;(718) 6&nbsp;350&nbsp;030
                 </Typography>{' '}
                 or&nbsp;leave a request on the website.
