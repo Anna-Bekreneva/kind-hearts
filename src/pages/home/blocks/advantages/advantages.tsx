@@ -22,7 +22,7 @@ const advantagesData: AdvantageType[] = [
 
 export const Advantages: FC = () => {
   return (
-    <section className={`section ${s.section}`}>
+    <section className={s.section}>
       <Typography as={'h2'} className={'sr-only'}>
         Our advantages
       </Typography>
