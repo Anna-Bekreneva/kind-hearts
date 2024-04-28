@@ -9,12 +9,7 @@ const meta = {
   args: {
     img: {
       alt: 'Helping people',
-      avif: '/assets/images/directions/people/people.avif 1x, /assets/images/directions/people/people@2x.avif 2x',
-      loading: 'lazy',
-      src: '/assets/images/directions/people/people.jpg',
-      srcSet:
-        '/assets/images/directions/people/people.jpg 1x, /assets/images/directions/people/people@2x.jpg 2x',
-      webp: '/assets/images/directions/people/people.webp 1x, /assets/images/directions/people/people@2x.webp 2x',
+      basePath: '/assets/images/directions/people/people',
     },
     linkTo: '',
     text: [
