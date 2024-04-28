@@ -1,11 +1,11 @@
 @import '../../../../styles/mixins';
 
 .section {
-  padding-bottom: 150px;
+  padding: 150px 0;
 
   /* stylelint-disable-next-line */
   @include mq(sm) {
-    padding-bottom: 120px;
+    padding: 120px;
   }
 }
 

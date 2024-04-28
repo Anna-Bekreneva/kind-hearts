@@ -1,7 +1,7 @@
 @import '../../../styles/mixins';
 
 .header {
-  height: 122px;
+  height: 123px;
   background-color: var(--color-white);
 }
 
@@ -10,13 +10,9 @@
   z-index: 2000;
 
   width: 100%;
-  padding: 20px 0;
+  padding-top: 20px;
 
   background-color: var(--color-white);
-
-  &[data-open='true'] {
-    padding-bottom: 0;
-  }
 }
 
 .wrapper {

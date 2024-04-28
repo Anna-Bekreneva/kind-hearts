@@ -1,14 +1,5 @@
 @import '../../../../styles/mixins';
 
-.section {
-  padding-bottom: 150px;
-
-  /* stylelint-disable-next-line */
-  @include mq(sm) {
-    padding-bottom: 120px;
-  }
-}
-
 .box {
   @include mq(xl, min) {
     width: 100%;

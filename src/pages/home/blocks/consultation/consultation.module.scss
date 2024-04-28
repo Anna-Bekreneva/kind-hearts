@@ -4,8 +4,13 @@
   @include flex-normal($align-items: flex-start, $justify-content: space-between);
 
   gap: 40px;
+  padding-left: 80px;
 
   /* stylelint-disable-next-line */
+  @include mq(xl) {
+    padding-left: 0;
+  }
+
   @include mq(md) {
     flex-direction: column;
   }

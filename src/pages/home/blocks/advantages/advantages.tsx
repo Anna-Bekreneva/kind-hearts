@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { memo } from 'react'
 
 import { TypographyVariant } from '@/common'
 import { Typography } from '@/components'
@@ -20,9 +20,9 @@ const advantagesData: AdvantageType[] = [
   },
 ]
 
-export const Advantages: FC = () => {
+export const Advantages = memo(() => {
   return (
-    <section className={s.section}>
+    <section>
       <Typography as={'h2'} className={'sr-only'}>
         Our advantages
       </Typography>
@@ -47,13 +47,13 @@ export const Advantages: FC = () => {
       </div>
     </section>
   )
-}
+})
 
 type AdvantageType = {
   text: string
   title: string
 }
-const Advantage: FC<AdvantageType> = ({ text, title }) => {
+const Advantage = memo(({ text, title }: AdvantageType) => {
   return (
     <>
       <Typography as={'span'} className={s.subtitle} variant={TypographyVariant.title}>
@@ -64,4 +64,4 @@ const Advantage: FC<AdvantageType> = ({ text, title }) => {
       </Typography>
     </>
   )
-}
+})

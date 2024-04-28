@@ -1,3 +1,5 @@
+import { memo } from 'react'
+
 import { Footer, Header } from '@/components'
 import {
   Advantages,
@@ -11,7 +13,7 @@ import {
   WaysHelp,
 } from '@/pages'
 
-export const HomePage = () => {
+export const HomePage = memo(() => {
   return (
     <>
       <Header />
@@ -29,4 +31,4 @@ export const HomePage = () => {
       <Footer />
     </>
   )
-}
+})

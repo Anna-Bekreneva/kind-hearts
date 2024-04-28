@@ -1,4 +1,11 @@
-import { ComponentPropsWithoutRef, ElementRef, ElementType, ForwardedRef, forwardRef } from 'react'
+import {
+  ComponentPropsWithoutRef,
+  ElementRef,
+  ElementType,
+  ForwardedRef,
+  forwardRef,
+  memo,
+} from 'react'
 
 import { ButtonVariant } from '@/common'
 
@@ -23,9 +30,11 @@ export const ButtonPolymorph = <T extends ElementType = 'button'>(
   )
 }
 
-export const Button = forwardRef(ButtonPolymorph) as <T extends ElementType = 'button'>(
-  props: Props<T> &
-    Omit<ComponentPropsWithoutRef<T>, keyof Props<T>> & {
-      ref?: ForwardedRef<ElementRef<T>>
-    }
-) => ReturnType<typeof ButtonPolymorph>
+export const Button = memo(
+  forwardRef(ButtonPolymorph) as <T extends ElementType = 'button'>(
+    props: Props<T> &
+      Omit<ComponentPropsWithoutRef<T>, keyof Props<T>> & {
+        ref?: ForwardedRef<ElementRef<T>>
+      }
+  ) => ReturnType<typeof ButtonPolymorph>
+)

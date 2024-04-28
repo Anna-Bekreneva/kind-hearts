@@ -1,12 +1,13 @@
-import { FC } from 'react'
+import { memo } from 'react'
 
 import { TypographyVariant } from '@/common'
 import { Typography } from '@/components'
 
 import s from './ways-help.module.scss'
-export const WaysHelp: FC = () => {
+
+export const WaysHelp = memo(() => {
   return (
-    <section className={'section'}>
+    <section className={'section'} id={'ways-help'}>
       <div className={'container'}>
         <div className={s.wrapper}>
           <div className={s.content}>
@@ -42,4 +43,4 @@ export const WaysHelp: FC = () => {
       </div>
     </section>
   )
-}
+})

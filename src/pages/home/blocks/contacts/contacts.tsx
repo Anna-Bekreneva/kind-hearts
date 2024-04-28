@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { memo } from 'react'
 
 import { TypographyVariant } from '@/common'
 import { AddressCard, AddressCardProps, Typography } from '@/components'
@@ -50,9 +50,9 @@ const dataContacts: ContactsCardType[] = [
   },
 ]
 
-export const Contacts: FC = () => {
+export const Contacts = memo(() => {
   return (
-    <section className={'section'}>
+    <section className={'section'} id={'contacts'}>
       <div className={'container'}>
         <Typography as={'h2'} className={s.title} variant={TypographyVariant.title}>
           Contacts
@@ -103,4 +103,4 @@ export const Contacts: FC = () => {
       </div>
     </section>
   )
-}
+})

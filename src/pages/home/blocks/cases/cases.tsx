@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { memo } from 'react'
 
 import { TypographyVariant } from '@/common'
 import { CaseCard, Typography } from '@/components'
@@ -93,7 +93,7 @@ const dataCases: DataCasesType[] = [
   },
 ]
 
-export const Cases: FC = () => {
+export const Cases = memo(() => {
   const swiperBreakpoints = {
     0: { slidesPerGroup: 1, slidesPerView: 1 },
     560: { slidesPerGroup: 1, slidesPerView: 1.5 },
@@ -101,7 +101,7 @@ export const Cases: FC = () => {
   }
 
   return (
-    <section className={'section cases'}>
+    <section className={'section cases'} id={'cases'}>
       <div className={s.container}>
         <div className={s.box}>
           <Typography as={'h2'} variant={TypographyVariant.title}>
@@ -136,4 +136,4 @@ export const Cases: FC = () => {
       </div>
     </section>
   )
-}
+})
