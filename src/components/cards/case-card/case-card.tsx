@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { memo } from 'react'
 
 import { TypographyVariant } from '@/common'
 import { Picture, PicturePropsType, Typography } from '@/components'
@@ -11,7 +11,7 @@ export type CaseType = {
   dateTime?: string
   title: string
 } & Omit<PicturePropsType, 'className'>
-export const CaseCard: FC<CaseType> = ({ className, date, dateTime, title, ...rest }) => {
+export const CaseCard = memo(({ className, date, dateTime, title, ...rest }: CaseType) => {
   return (
     <article className={`${s.card} ${className}`}>
       <Picture className={s.img} {...rest} />
@@ -25,4 +25,4 @@ export const CaseCard: FC<CaseType> = ({ className, date, dateTime, title, ...re
       </Typography>
     </article>
   )
-}
+})

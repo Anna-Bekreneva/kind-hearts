@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { memo } from 'react'
 
 import { TypographyVariant } from '@/common'
 import { Typography } from '@/components'
@@ -11,18 +11,15 @@ export type AddressCardProps = {
   text: string
   title: string
 }
-export const AddressCard: FC<AddressCardProps> = ({
-  backgroundColor,
-  borderColor,
-  text,
-  title,
-}) => {
-  return (
-    <article className={s.card} style={{ backgroundColor, borderColor }}>
-      <Typography as={'h3'} variant={TypographyVariant.subtitle1}>
-        {title}
-      </Typography>
-      <Typography>{text}</Typography>
-    </article>
-  )
-}
+export const AddressCard = memo(
+  ({ backgroundColor, borderColor, text, title }: AddressCardProps) => {
+    return (
+      <article className={s.card} style={{ backgroundColor, borderColor }}>
+        <Typography as={'h3'} variant={TypographyVariant.subtitle1}>
+          {title}
+        </Typography>
+        <Typography>{text}</Typography>
+      </article>
+    )
+  }
+)

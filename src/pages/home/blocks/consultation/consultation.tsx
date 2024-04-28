@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { memo } from 'react'
 import { useForm } from 'react-hook-form'
 
 import { TypographyVariant } from '@/common'
@@ -16,7 +16,7 @@ const ConsultationFormSchema = z.object({
 
 type ConsultationFormSchemaType = z.infer<typeof ConsultationFormSchema>
 
-export const Consultation: FC = () => {
+export const Consultation = memo(() => {
   const { control, handleSubmit } = useForm<ConsultationFormSchemaType>({
     resolver: zodResolver(ConsultationFormSchema),
   })
@@ -91,4 +91,4 @@ export const Consultation: FC = () => {
       </div>
     </section>
   )
-}
+})

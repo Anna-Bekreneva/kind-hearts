@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { memo } from 'react'
 
 import { TypographyVariant } from '@/common'
 import { DirectionCard, DirectionPropsType, Typography } from '@/components'
@@ -9,12 +9,7 @@ const directionsData: DirectionPropsType[] = [
   {
     img: {
       alt: 'Helping people',
-      avif: '/assets/images/directions/people/people.avif 1x, /assets/images/directions/people/people@2x.avif 2x',
-      loading: 'lazy',
-      src: '/assets/images/directions/people/people.jpg',
-      srcSet:
-        '/assets/images/directions/people/people.jpg 1x, /assets/images/directions/people/people@2x.jpg 2x',
-      webp: '/assets/images/directions/people/people.webp 1x, /assets/images/directions/people/people@2x.webp 2x',
+      basePath: '/assets/images/directions/people/people',
     },
     linkTo: '',
     text: [
@@ -34,12 +29,7 @@ const directionsData: DirectionPropsType[] = [
   {
     img: {
       alt: 'Helping people',
-      avif: '/assets/images/directions/animals/animals.avif 1x, /assets/images/directions/animals/animals@2x.avif 2x',
-      loading: 'lazy',
-      src: '/assets/images/directions/animals/animals.jpg',
-      srcSet:
-        '/assets/images/directions/animals/animals.jpg 1x, /assets/images/directions/animals/animals@2x.jpg 2x',
-      webp: '/assets/images/directions/animals/animals.webp 1x, /assets/images/directions/animals/animals@2x.webp 2x',
+      basePath: '/assets/images/directions/animals/animals',
     },
     linkTo: '',
     text: [
@@ -58,9 +48,9 @@ const directionsData: DirectionPropsType[] = [
   },
 ]
 
-export const Directions: FC = () => {
+export const Directions = memo(() => {
   return (
-    <section className={s.section}>
+    <section className={s.section} id={'directions'}>
       <div className={'container'}>
         <div className={s.header}>
           <div className={s.box}>
@@ -112,4 +102,4 @@ export const Directions: FC = () => {
       </div>
     </section>
   )
-}
+})

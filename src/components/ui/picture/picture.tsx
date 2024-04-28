@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, FC } from 'react'
+import { ComponentPropsWithoutRef, memo } from 'react'
 
 type Props = {
   alt: string
@@ -8,7 +8,7 @@ type Props = {
 }
 
 export type PicturePropsType = Props & Omit<ComponentPropsWithoutRef<'img'>, keyof Props>
-export const Picture: FC<PicturePropsType> = ({ alt, avif, src, webp, ...rest }) => {
+export const Picture = memo(({ alt, avif, src, webp, ...rest }: PicturePropsType) => {
   return (
     <picture>
       <source srcSet={avif} type={'image/avif'} />
@@ -16,4 +16,4 @@ export const Picture: FC<PicturePropsType> = ({ alt, avif, src, webp, ...rest })
       <img alt={alt} src={src} {...rest} />
     </picture>
   )
-}
+})

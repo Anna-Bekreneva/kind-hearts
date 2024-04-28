@@ -1,5 +1,5 @@
-import { FC } from 'react'
-import { Link } from 'react-router-dom'
+import { memo } from 'react'
+import { Link } from 'react-scroll'
 
 import { TypographyVariant } from '@/common'
 import { Logo, Typography, useHeader } from '@/components'
@@ -7,20 +7,20 @@ import { Logo, Typography, useHeader } from '@/components'
 import s from './header.module.scss'
 
 const menu: Omit<MenuItemType, 'callback'>[] = [
-  { text: 'What we do', to: '' },
-  { text: 'Ways to help', to: '' },
-  { text: 'Our cases', to: '' },
-  { text: 'Tax benefits', to: '' },
-  { text: 'Contacts', to: '' },
+  { text: 'What we do', to: 'directions' },
+  { text: 'Ways to help', to: 'ways-help' },
+  { text: 'Our cases', to: 'cases' },
+  { text: 'Tax benefits', to: 'state-support' },
+  { text: 'Contacts', to: 'contacts' },
 ]
 
-export const Header: FC = () => {
+export const Header = memo(() => {
   const { burgerButtonRef, isOpenMenu, menuWrapperRef, setIsOpenMenu } = useHeader()
 
   return (
     <header className={s.header}>
       {isOpenMenu && <div aria-hidden className={'overlay'}></div>}
-      <div className={s.fixed} data-open={isOpenMenu}>
+      <div className={s.fixed}>
         <div className={'container'}>
           <nav className={s.wrapper}>
             <Logo />
@@ -86,7 +86,7 @@ export const Header: FC = () => {
       </div>
     </header>
   )
-}
+})
 
 type MenuItemType = {
   callback: () => void
@@ -94,12 +94,12 @@ type MenuItemType = {
   to: string
 }
 
-const MenuItem: FC<MenuItemType> = ({ callback, text, to }) => {
+const MenuItem = memo(({ callback, text, to }: MenuItemType) => {
   return (
     <li>
-      <Link onClick={callback} role={'menuitem'} to={to}>
+      <Link href={'#'} offset={-50} onClick={callback} role={'menuitem'} smooth to={to}>
         {text}
       </Link>
     </li>
   )
-}
+})

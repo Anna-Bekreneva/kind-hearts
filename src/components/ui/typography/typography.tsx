@@ -1,4 +1,11 @@
-import { ComponentPropsWithoutRef, ElementRef, ElementType, ForwardedRef, forwardRef } from 'react'
+import {
+  ComponentPropsWithoutRef,
+  ElementRef,
+  ElementType,
+  ForwardedRef,
+  forwardRef,
+  memo,
+} from 'react'
 
 import { TypographyVariant } from '@/common'
 
@@ -22,9 +29,11 @@ export const TypographyPolymorph = <T extends ElementType = 'p'>(
   )
 }
 
-export const Typography = forwardRef(TypographyPolymorph) as <T extends ElementType = 'button'>(
-  props: Props<T> &
-    Omit<ComponentPropsWithoutRef<T>, keyof Props<T>> & {
-      ref?: ForwardedRef<ElementRef<T>>
-    }
-) => ReturnType<typeof TypographyPolymorph>
+export const Typography = memo(
+  forwardRef(TypographyPolymorph) as <T extends ElementType = 'button'>(
+    props: Props<T> &
+      Omit<ComponentPropsWithoutRef<T>, keyof Props<T>> & {
+        ref?: ForwardedRef<ElementRef<T>>
+      }
+  ) => ReturnType<typeof TypographyPolymorph>
+)

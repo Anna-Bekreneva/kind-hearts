@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react'
+import { ReactNode, memo } from 'react'
 
 import {
   Accordion,
@@ -92,7 +92,7 @@ const questions: QuestionType[] = [
   },
 ]
 
-export const Questions: FC = () => {
+export const Questions = memo(() => {
   const leftCount = Math.floor(questions.length / 2)
   const leftItems = [...questions].splice(0, leftCount)
   const rightItems = [...questions].splice(leftCount)
@@ -112,9 +112,13 @@ export const Questions: FC = () => {
       </div>
     </section>
   )
+})
+
+type AccordionListPropsType = {
+  items: QuestionType[]
 }
 
-const AccordionList: FC<{ items: QuestionType[] }> = ({ items }) => {
+const AccordionList = memo(({ items }: AccordionListPropsType) => {
   return (
     <Accordion className={s.list} type={'multiple'}>
       {items.map(item => (
@@ -125,4 +129,4 @@ const AccordionList: FC<{ items: QuestionType[] }> = ({ items }) => {
       ))}
     </Accordion>
   )
-}
+})

@@ -1,11 +1,13 @@
+import { memo } from 'react'
+
 import { TypographyVariant } from '@/common'
 import { Typography } from '@/components'
 
 import s from './state-supports.module.scss'
 
-export const StateSupports = () => {
+export const StateSupports = memo(() => {
   return (
-    <section className={'section'}>
+    <section className={'section'} id={'state-support'}>
       <div className={'container'}>
         <div className={s.wrapper}>
           <div className={s.illustration}>
@@ -46,4 +48,4 @@ export const StateSupports = () => {
       </div>
     </section>
   )
-}
+})
