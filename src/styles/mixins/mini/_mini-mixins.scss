@@ -1,3 +1,5 @@
+@import '../adaptive';
+
 @mixin bg($background-size: contain) {
   background-repeat: no-repeat;
   background-position: center;
@@ -36,5 +38,22 @@
   /* stylelint-disable-next-line */
   @include mq(xl) {
     padding: 80px 20px;
+  }
+}
+
+@mixin link-focus {
+  border-radius: 4px;
+  outline: 0;
+
+  &:focus-visible {
+    box-shadow: var(--shadow-focus);
+  }
+}
+
+@mixin link-hover {
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--color-green-400);
+    }
   }
 }

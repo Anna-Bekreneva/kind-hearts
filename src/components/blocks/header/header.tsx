@@ -97,7 +97,7 @@ type MenuItemType = {
 const MenuItem = memo(({ callback, text, to }: MenuItemType) => {
   return (
     <li>
-      <Link href={'#'} offset={-50} onClick={callback} role={'menuitem'} smooth to={to}>
+      <Link className={'link'} href={'#'} offset={-50} onClick={callback} role={'menuitem'} smooth to={to}>
         {text}
       </Link>
     </li>
