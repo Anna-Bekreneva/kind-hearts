@@ -90,6 +90,7 @@ export const Contacts = memo(() => {
                 </Typography>
                 <Typography
                   as={'a'}
+                  className={'link'}
                   href={contact.href}
                   target={'_blank'}
                   variant={TypographyVariant.subtitle1}

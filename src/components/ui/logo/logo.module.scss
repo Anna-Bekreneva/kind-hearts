@@ -3,6 +3,13 @@
 .logo {
   display: inline-block;
   width: 100%;
+  outline: 0;
+  transition: box-shadow 0.3s, border-radius 0.3s;
+  border-radius: 4px;
+
+  &:focus-visible {
+    box-shadow: var(--shadow-focus);
+  }
 }
 
 .standard,

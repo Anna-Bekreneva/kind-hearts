@@ -53,6 +53,11 @@
 }
 
 .link {
+  @include link-focus;
+  @include link-hover;
+
+  transition: color 0.3s, box-shadow 0.3s;
+
   text-decoration: underline;
 }
 

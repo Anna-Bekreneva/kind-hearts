@@ -102,3 +102,49 @@ body {
   opacity: 0.5;
   background-color: var(--color-blue-400);
 }
+
+.link {
+  @include link-focus;
+  transition: color 0.3s, box-shadow 0.3s;
+
+  @media (any-hover: hover) {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: -4px;
+      width: 0;
+      height: 1px;
+      background-color: var(--color-green-400);
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+      transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    &:hover {
+      color: var(--color-green-400);
+
+      &::before,
+      &::after {
+        width: 100%;
+      }
+
+      &::before {
+        transition: width 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+      }
+
+      &::after {
+        background-color: transparent;
+        transition: 0s;
+      }
+    }
+  }
+}
