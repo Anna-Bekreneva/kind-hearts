@@ -41,7 +41,9 @@
   @include link-focus;
   @include link-hover;
 
-  transition: box-shadow 0.3s, color 0.3s;
+  transition:
+    box-shadow 0.3s,
+    color 0.3s;
   font-weight: 600;
 }
 

@@ -99,13 +99,15 @@ body {
   width: 100%;
   height: 100%;
 
-  opacity: 0.5;
+  //opacity: 0.5;
   background-color: var(--color-blue-400);
 }
 
 .link {
   @include link-focus;
-  transition: color 0.3s, box-shadow 0.3s;
+  transition:
+    color 0.3s,
+    box-shadow 0.3s;
 
   @media (any-hover: hover) {
     position: relative;
