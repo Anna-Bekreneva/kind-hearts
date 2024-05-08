@@ -3,9 +3,10 @@
 .button {
   @include flex-normal;
 
-  outline: 0;
   width: 150px;
   height: 150px;
+
+  outline: 0;
   padding: 8px;
   overflow: hidden;
   font-size: 16px;
@@ -23,13 +24,20 @@
 .primary {
   background-color: var(--color-green-400);
   position: relative;
-  transition: background-color 0.3s, box-shadow 0.3s;
+  border: 1px solid var(--color-yellow-400);
+  transition:
+    background-color 0.3s,
+    box-shadow 0.3s,
+    border-color 0.1s;
 
   span {
     position: relative;
     overflow: hidden;
     transition: color 0.3s;
     transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
+    animation:
+      MoveUpInitial 0.2s forwards,
+      MoveUpEnd 0.2s forwards 0.2s;
   }
 
   &::before {
@@ -43,7 +51,10 @@
     padding-bottom: 100%;
     border-radius: 50%;
     transform: translate3d(0, 0, 0);
-    transition: transform 0.3s, background-color 0.3s;
+    transition:
+      transform 0.3s,
+      background-color 0.3s,
+      border-color 0.1s;
     transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
   }
 
@@ -58,6 +69,8 @@
 
   @media (any-hover: hover) {
     &:hover {
+      border: 1px solid transparent;
+
       &::before {
         transform: translate3d(0, 100%, 0);
       }
@@ -72,3 +85,19 @@
 .secondary {
   border: 1px solid var(--color-yellow-400);
 }
+
+//@keyframes MoveUpInitial {
+//  100% {
+//    transform: translate3d(0, -105%, 0);
+//  }
+//}
+//
+//@keyframes MoveUpEnd {
+//  from {
+//    transform: translate3d(0, 100%, 0);
+//  }
+//
+//  to {
+//    transform: translate3d(0, 0, 0);
+//  }
+//}

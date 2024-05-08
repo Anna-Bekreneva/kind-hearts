@@ -1,4 +1,4 @@
-import { memo } from 'react'
+import { memo, useEffect, useState } from 'react'
 
 import { TypographyVariant } from '@/common'
 import { Typography } from '@/components'
@@ -7,16 +7,20 @@ import s from './advantages.module.scss'
 
 const advantagesData: AdvantageType[] = [
   {
+    number: 5000,
     text: 'raised in 2024',
-    title: `$5000`,
+    time: 0.9,
+    title: `$`,
   },
   {
+    number: 24,
     text: 'people received help thanks to you',
-    title: '24',
+    time: 20,
   },
   {
+    number: 13,
     text: 'months of saving animals together',
-    title: '13',
+    time: 10,
   },
 ]
 
@@ -38,7 +42,12 @@ export const Advantages = memo(() => {
             <ul className={s.items}>
               {advantagesData.map((advantage, index) => (
                 <li className={s.item} key={index}>
-                  <Advantage text={advantage.text} title={advantage.title} />
+                  <Advantage
+                    number={advantage.number}
+                    text={advantage.text}
+                    time={advantage.time}
+                    title={advantage.title}
+                  />
                 </li>
               ))}
             </ul>
@@ -50,14 +59,26 @@ export const Advantages = memo(() => {
 })
 
 type AdvantageType = {
+  number: number
   text: string
-  title: string
+  time: number
+  title?: string
 }
-const Advantage = memo(({ text, title }: AdvantageType) => {
+const Advantage = memo(({ number, text, time, title }: AdvantageType) => {
+  const [currVal, setCurrVal] = useState(0)
+
+  useEffect(() => {
+    if (currVal === number) {
+      return
+    }
+    setTimeout(setCurrVal, time, currVal + 1)
+  }, [currVal])
+
   return (
     <>
       <Typography as={'span'} className={s.subtitle} variant={TypographyVariant.title}>
-        {title}
+        {title && title}
+        {currVal}
       </Typography>
       <Typography as={'span'} className={s.subtext}>
         {text}

@@ -8,10 +8,15 @@ export const Footer = memo(() => {
       <div className={'container'}>
         <div className={s.wrapper}>
           <span>© Kind Hearts 2024</span>
-          <a className={'link'} href={'https://www.instagram.com/kindheartsfound?igsh=MXRyMDJ6M3ZycnducQ%3D%3D'}>
+          <a
+            className={'link'}
+            href={'https://www.instagram.com/kindheartsfound?igsh=MXRyMDJ6M3ZycnducQ%3D%3D'}
+          >
             Instagram
           </a>
-          <a className={'link'} href={'#'}>Privacy Policy</a>
+          <a className={'link'} href={'#'}>
+            Privacy Policy
+          </a>
         </div>
       </div>
     </footer>

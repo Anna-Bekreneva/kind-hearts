@@ -110,6 +110,10 @@ export const Cases = memo(() => {
           <Swiper
             breakpoints={swiperBreakpoints}
             modules={[Navigation, Pagination, A11y]}
+            // navigation={{
+            //   nextEl: `${s.swiperButtonNext} button`,
+            //   prevEl: '${s.swiperButtonPrev} button',
+            // }}
             navigation
             pagination={{ clickable: true, dynamicBullets: true }}
             spaceBetween={20}

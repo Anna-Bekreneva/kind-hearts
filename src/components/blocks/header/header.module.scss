@@ -18,7 +18,7 @@
 .wrapper {
   @include flex-normal($justify-content: space-between);
 
-  z-index: 10;
+  // z-index: 10;
 
   padding: 10px 80px;
 
@@ -29,11 +29,13 @@
   /* stylelint-disable-next-line */
   @include mq(xl) {
     padding: 10px 20px;
+    background-color: transparent;
   }
 }
 
 .burgerButton {
   position: relative;
+  z-index: 100;
 
   width: 40px;
   height: 40px;
@@ -113,11 +115,27 @@
   transition: transform 0.3s ease-in-out;
 }
 
+.background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 320px;
+  background-color: var(--color-white);
+}
+
 .menu {
+  //transition:
+  //  opacity 0.5s,
+  //  height 0.5s,
+  //  width 0.5s;
+  //transition-delay: 0.3s;
+
   &[data-open='true'] {
     @include mq(lg) {
       position: fixed;
-      z-index: -1;
+      z-index: 1;
       top: 0;
       right: 0;
 
@@ -127,14 +145,20 @@
       max-width: 320px;
       height: 100vh;
       padding-top: 81px;
+      //opacity: 1;
+      //overflow: visible;
+      //transition: none;
 
-      background-color: var(--color-white);
+      // background-color: var(--color-white);
     }
   }
 
   /* stylelint-disable-next-line */
   @include mq(lg) {
-    display: none;
+    opacity: 0;
+    overflow: hidden;
+    height: 0;
+    width: 0;
   }
 }
 
@@ -167,7 +191,6 @@
 
 .mobile {
   @include flex-direction;
-
   gap: 20px;
 
   /* stylelint-disable-next-line */

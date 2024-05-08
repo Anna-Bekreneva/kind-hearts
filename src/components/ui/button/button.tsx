@@ -20,13 +20,19 @@ export const ButtonPolymorph = <T extends ElementType = 'button'>(
   props: Props<T> & Omit<ComponentPropsWithoutRef<T>, keyof Props<T>>,
   ref: ElementRef<T>
 ) => {
-  const { children, as: Tag = 'button', className, variant = ButtonVariant.primary, ...rest } = props
+  const {
+    as: Tag = 'button',
+    children,
+    className,
+    variant = ButtonVariant.primary,
+    ...rest
+  } = props
 
   const buttonClassName = `${s.button} ${s[String(variant)]} ${className}`
 
   return (
     // @ts-expect-error TS2322
-    <Tag className={buttonClassName} ref={ref} {...rest} >
+    <Tag className={buttonClassName} ref={ref} {...rest}>
       <span>{children}</span>
     </Tag>
   )
