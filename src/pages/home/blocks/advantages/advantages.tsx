@@ -1,7 +1,8 @@
-import { memo, useEffect, useState } from 'react'
+import { memo } from 'react'
 
 import { TypographyVariant } from '@/common'
 import { Typography } from '@/components'
+import { Advantage, AdvantageType } from '@/pages'
 
 import s from './advantages.module.scss'
 
@@ -9,18 +10,18 @@ const advantagesData: AdvantageType[] = [
   {
     number: 5000,
     text: 'raised in 2024',
-    time: 0.9,
+    time: 6,
     title: `$`,
   },
   {
     number: 24,
     text: 'people received help thanks to you',
-    time: 20,
+    time: 5,
   },
   {
     number: 13,
     text: 'months of saving animals together',
-    time: 10,
+    time: 5,
   },
 ]
 
@@ -55,34 +56,5 @@ export const Advantages = memo(() => {
         </div>
       </div>
     </section>
-  )
-})
-
-type AdvantageType = {
-  number: number
-  text: string
-  time: number
-  title?: string
-}
-const Advantage = memo(({ number, text, time, title }: AdvantageType) => {
-  const [currVal, setCurrVal] = useState(0)
-
-  useEffect(() => {
-    if (currVal === number) {
-      return
-    }
-    setTimeout(setCurrVal, time, currVal + 1)
-  }, [currVal])
-
-  return (
-    <>
-      <Typography as={'span'} className={s.subtitle} variant={TypographyVariant.title}>
-        {title && title}
-        {currVal}
-      </Typography>
-      <Typography as={'span'} className={s.subtext}>
-        {text}
-      </Typography>
-    </>
   )
 })
