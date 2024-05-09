@@ -1,9 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
 
+import { useDimensions } from '@/utils'
+
 export const useHeader = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false)
+
   const menuWrapperRef = useRef<HTMLDivElement | null>(null)
   const burgerButtonRef = useRef<HTMLButtonElement | null>(null)
+
+  const navigationRef = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
     const body = document.querySelector('body')
@@ -30,5 +35,7 @@ export const useHeader = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [isOpenMenu])
 
-  return { burgerButtonRef, isOpenMenu, menuWrapperRef, setIsOpenMenu }
+  const { height } = useDimensions(menuWrapperRef)
+
+  return { burgerButtonRef, height, isOpenMenu, menuWrapperRef, navigationRef, setIsOpenMenu }
 }

@@ -3,15 +3,17 @@
 .button {
   @include flex-normal;
 
+  overflow: hidden;
+
   width: 150px;
   height: 150px;
-
-  outline: 0;
   padding: 8px;
-  overflow: hidden;
+
   font-size: 16px;
   text-align: center;
+
   border-radius: 50%;
+  outline: 0;
 
   /* stylelint-disable-next-line */
   @include mq(sm) {
@@ -22,8 +24,8 @@
 }
 
 .primary {
-  background-color: var(--color-green-400);
   position: relative;
+  background-color: var(--color-green-400);
   border: 1px solid var(--color-yellow-400);
   transition:
     background-color 0.3s,
@@ -32,7 +34,9 @@
 
   span {
     position: relative;
+
     overflow: hidden;
+
     transition: color 0.3s;
     transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
     animation:
@@ -41,16 +45,20 @@
   }
 
   &::before {
+    content: '';
+
     position: absolute;
     top: 0;
     left: 0;
-    content: '';
-    background-color: var(--color-yellow-400);
+    transform: translate3d(0, 0, 0);
+
     width: 100%;
     height: 0;
     padding-bottom: 100%;
+
+    background-color: var(--color-yellow-400);
     border-radius: 50%;
-    transform: translate3d(0, 0, 0);
+
     transition:
       transform 0.3s,
       background-color 0.3s,
@@ -85,19 +93,3 @@
 .secondary {
   border: 1px solid var(--color-yellow-400);
 }
-
-//@keyframes MoveUpInitial {
-//  100% {
-//    transform: translate3d(0, -105%, 0);
-//  }
-//}
-//
-//@keyframes MoveUpEnd {
-//  from {
-//    transform: translate3d(0, 100%, 0);
-//  }
-//
-//  to {
-//    transform: translate3d(0, 0, 0);
-//  }
-//}
