@@ -1,12 +1,6 @@
 import { ReactNode, memo } from 'react'
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionHeader,
-  AccordionItem,
-  Typography,
-} from '@/components'
+import { Accordion, AccordionItem, Typography } from '@/components'
 import { v1 } from 'uuid'
 
 import s from './questions.module.scss'
@@ -122,9 +116,8 @@ const AccordionList = memo(({ items }: AccordionListPropsType) => {
   return (
     <Accordion className={s.list} type={'multiple'}>
       {items.map(item => (
-        <AccordionItem key={item.id} value={item.id}>
-          <AccordionHeader> {item.title} </AccordionHeader>
-          <AccordionContent> {item.content} </AccordionContent>
+        <AccordionItem key={item.id} title={item.title} value={item.id}>
+          {item.content}
         </AccordionItem>
       ))}
     </Accordion>
