@@ -5,6 +5,11 @@ import { Typography } from '@/components'
 
 import s from './state-supports.module.scss'
 
+const supports: SupportCardProps[] = [
+  { subtitle: 'donate', title: '$ 100' },
+  { subtitle: 'tax free', title: '- $ 100' },
+]
+
 export const StateSupports = memo(() => {
   return (
     <section className={'section'} id={'state-support'}>
@@ -12,22 +17,9 @@ export const StateSupports = memo(() => {
         <div className={s.wrapper}>
           <div className={s.illustration}>
             <div className={s.cards}>
-              <div className={s.card}>
-                <Typography as={'span'} variant={TypographyVariant.large}>
-                  $ 100
-                </Typography>
-                <Typography as={'span'} className={s.subtext} variant={TypographyVariant.title}>
-                  donate
-                </Typography>
-              </div>
-              <div className={s.card}>
-                <Typography as={'span'} variant={TypographyVariant.large}>
-                  - $ 100
-                </Typography>
-                <Typography as={'span'} className={s.subtext} variant={TypographyVariant.title}>
-                  tax free
-                </Typography>
-              </div>
+              {supports.map((item, index) => (
+                <SupportCard key={index} {...item} />
+              ))}
             </div>
           </div>
           <div className={s.content}>
@@ -47,5 +39,23 @@ export const StateSupports = memo(() => {
         </div>
       </div>
     </section>
+  )
+})
+
+type SupportCardProps = {
+  subtitle: string
+  title: string
+}
+
+const SupportCard = memo(({ subtitle, title }: SupportCardProps) => {
+  return (
+    <div className={s.card}>
+      <Typography as={'span'} variant={TypographyVariant.large}>
+        {title}
+      </Typography>
+      <Typography as={'span'} className={s.subtext} variant={TypographyVariant.title}>
+        {subtitle}
+      </Typography>
+    </div>
   )
 })
