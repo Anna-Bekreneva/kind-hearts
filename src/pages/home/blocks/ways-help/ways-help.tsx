@@ -37,7 +37,7 @@ export const WaysHelp = memo(() => {
               style={{
                 backgroundImage: 'url(/assets/images/waysHelp.jpg)',
               }}
-            ></div>
+            />
           </div>
         </div>
       </div>

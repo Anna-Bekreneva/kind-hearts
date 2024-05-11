@@ -25,48 +25,34 @@
   }
 }
 
-.form {
-  @include adaptive-value-base('padding', 80, 20, 1);
-
-  position: relative;
-
-  width: 100%;
-
-  background-color: var(--color-yellow-100);
-  border: 1px solid var(--color-yellow-200);
-  border-radius: 20px;
-
-  /* stylelint-disable-next-line */
-  @include mq(md, min) {
-    max-width: 690px;
-  }
-}
-
-.fields {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-
-  &:not(:last-child) {
-    margin-bottom: 20px;
+.text {
+  p {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
   }
 }
 
 .link {
-  @include link-focus;
   @include link-hover;
+  @include link-focus;
 
-  transition:
-    color 0.3s,
-    box-shadow 0.3s;
+  position: relative;
+  padding: 7px 50px 7px 0;
 
-  text-decoration: underline;
-}
+  &::before {
+    @include bg;
 
-.button {
-  @include adaptive-value-base('right', 80, 0, 1);
+    content: '';
 
-  position: absolute;
-  bottom: 0;
-  transform: translateY(50%);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    width: 40px;
+    height: 40px;
+
+    background-image: url('../../../../assets/icons/watsapp.svg');
+  }
 }

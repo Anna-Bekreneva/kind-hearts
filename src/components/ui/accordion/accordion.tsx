@@ -1,9 +1,8 @@
-import { memo } from 'react'
+import { ReactNode, memo } from 'react'
 
+import { ArrowIcon, Typography } from '@/components'
 import * as AccordionRadix from '@radix-ui/react-accordion'
 import {
-  AccordionContentProps,
-  AccordionHeaderProps,
   AccordionItemProps,
   AccordionMultipleProps,
   AccordionSingleProps,
@@ -20,34 +19,27 @@ export const Accordion = memo(({ className, ...rest }: AccordionPropsType) => {
 })
 
 type AccordionItemPropsType = {
+  children: ReactNode
   className?: string
+  title: string
 } & AccordionItemProps
-export const AccordionItem = memo(({ className, value, ...rest }: AccordionItemPropsType) => {
-  return <AccordionRadix.Item className={`${s.item} ${className}`} value={value} {...rest} />
-})
-
-type AccordionHeaderPropsType = {
-  className?: string
-} & AccordionHeaderProps
-export const AccordionHeader = memo(
-  ({ children, className, ...rest }: AccordionHeaderPropsType) => {
+export const AccordionItem = memo(
+  ({ children, className, title, value, ...rest }: AccordionItemPropsType) => {
     return (
-      <AccordionRadix.Header className={className} {...rest}>
-        <AccordionRadix.Trigger className={s.trigger}>{children}</AccordionRadix.Trigger>
-      </AccordionRadix.Header>
-    )
-  }
-)
+      <AccordionRadix.Item className={`${s.item} ${className}`} value={value} {...rest}>
+        <AccordionRadix.Header>
+          <AccordionRadix.Trigger asChild>
+            <div className={s.trigger}>
+              <Typography as={'h3'}>{title}</Typography>
+              <ArrowIcon className={s.icon}></ArrowIcon>
+            </div>
+          </AccordionRadix.Trigger>
+        </AccordionRadix.Header>
 
-type AccordionContentPropsType = {
-  className?: string
-} & AccordionContentProps
-export const AccordionContent = memo(
-  ({ children, className, ...rest }: AccordionContentPropsType) => {
-    return (
-      <AccordionRadix.Content className={`${s.content} ${className}`} {...rest}>
-        {children}
-      </AccordionRadix.Content>
+        <AccordionRadix.Content className={`${s.content} ${className}`}>
+          <div className={s.box}>{children}</div>
+        </AccordionRadix.Content>
+      </AccordionRadix.Item>
     )
   }
 )

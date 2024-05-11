@@ -27,14 +27,14 @@ export const Hero = memo(() => {
             style={{
               backgroundImage: 'url(/assets/images/hero/hero.png)',
             }}
-          ></span>
+          />
           <span
             aria-hidden
             className={`${s.img} ${s.imgMobile}`}
             style={{
               backgroundImage: 'url(/assets/images/hero/hero-mobile.png)',
             }}
-          ></span>
+          />
         </div>
       </div>
     </section>
