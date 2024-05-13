@@ -14,7 +14,7 @@ export const Form = memo(() => {
           as={'input'}
           control={control}
           name={'name'}
-          placeholder={'Introduce youreself'}
+          placeholder={'Introduce yourself'}
         />
         <ControlledTextField
           as={'input'}
