@@ -22,7 +22,7 @@ export const Consultation = memo(() => {
                 Or write to us on{' '}
                 <a
                   className={s.link}
-                  href={'https://wa.me/17327886611'}
+                  href={'https://wa.me/79853879297'}
                   rel={'noreferrer'}
                   target={'_blank'}
                 >
