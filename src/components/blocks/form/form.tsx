@@ -7,8 +7,6 @@ import s from './form.module.scss'
 export const Form = memo(() => {
   const { control, errors, formRef, submitFormHandler } = useFormHook()
 
-  console.log(!!Object.keys(errors))
-
   return (
     <form className={s.form} onSubmit={submitFormHandler} ref={formRef}>
       <div className={s.fields}>
