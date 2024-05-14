@@ -43,8 +43,18 @@
   }
 }
 
-.mobile {
-  @include flex-direction;
+.item {
+  @include mq(lg, min) {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
 
+.mobile {
+  display: none;
   gap: 20px;
+
+  @include mq(lg) {
+    @include flex-direction;
+  }
 }

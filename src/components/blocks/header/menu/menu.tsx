@@ -59,7 +59,7 @@ type MenuItemProps = {
 
 const MenuItem = memo(({ callback, text, to }: MenuItemProps) => {
   return (
-    <motion.li variants={childrenStaggerVariants}>
+    <motion.li className={s.item} variants={childrenStaggerVariants}>
       <Link
         className={'link'}
         href={'#'}
