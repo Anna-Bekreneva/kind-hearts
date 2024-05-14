@@ -1,8 +1,10 @@
+import { useRef } from 'react'
 import { useForm } from 'react-hook-form'
+import { toast } from 'react-toastify'
 
+import emailjs from '@emailjs/browser'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
-
 export const ConsultationFormSchema = z.object({
   email: z.string().email('Please enter a valid email'),
   message: z.string().optional(),
@@ -12,31 +14,39 @@ export const ConsultationFormSchema = z.object({
 export type ConsultationFormSchemaType = z.infer<typeof ConsultationFormSchema>
 
 export const useFormHook = () => {
-  const { control, handleSubmit } = useForm<ConsultationFormSchemaType>({
+  const {
+    control,
+    formState: { errors },
+    handleSubmit,
+    reset,
+  } = useForm<ConsultationFormSchemaType>({
+    defaultValues: { email: '', message: '', name: '' },
     resolver: zodResolver(ConsultationFormSchema),
   })
 
+  const formRef = useRef<HTMLFormElement | null>(null)
+
   const submitHandler = (data: ConsultationFormSchemaType) => {
-    console.log(data)
-    sendToWhatsapp(data)
-  }
-
-  const sendToWhatsapp = (data: ConsultationFormSchemaType) => {
-    const phone = '79853879297'
-
-    const { email, message, name } = data
-
-    const resMessage = encodeURIComponent(message ?? '')
-    const resName = encodeURIComponent(name)
-
-    const res = `name: ${resName}; email: ${email}; ${resMessage && `message: ${resMessage}`} `
-
-    const url = `https://web.whatsapp.com/send?phone=${phone}&text=${res}&source=&data=`
-
-    window.open(url)
+    if (formRef.current) {
+      emailjs
+        .sendForm('service_59nrloi', 'template_ny0dukf', formRef.current, 'ZRpAqdMxMWVFZzQAv')
+        .then(res => {
+          if (res.status === 200) {
+            reset()
+            toast('Thank you! Your application has been successfully sent', { type: 'success' })
+          }
+        })
+        .catch(error => {
+          if (error.message) {
+            toast('Check your internet connection', { type: 'error' })
+          } else {
+            toast("Something's gone wrong! Try again later", { type: 'error' })
+          }
+        })
+    }
   }
 
   const submitFormHandler = handleSubmit(submitHandler)
 
-  return { control, submitFormHandler }
+  return { control, errors, formRef, submitFormHandler }
 }

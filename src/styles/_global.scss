@@ -150,3 +150,9 @@ body {
     }
   }
 }
+
+.Toastify__toast-body {
+  align-items: flex-start !important;
+  font-size: inherit;
+  color: var(--color-dark-700);
+}

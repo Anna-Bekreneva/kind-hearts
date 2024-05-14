@@ -20,7 +20,12 @@ export const Consultation = memo(() => {
               </Typography>
               <Typography variant={TypographyVariant.subtitle2}>
                 Or write to us on{' '}
-                <a className={s.link} href={'#'} rel={'noreferrer'} target={'_blank'}>
+                <a
+                  className={s.link}
+                  href={'https://wa.me/17327886611'}
+                  rel={'noreferrer'}
+                  target={'_blank'}
+                >
                   WhatsApp
                 </a>
               </Typography>

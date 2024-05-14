@@ -5,26 +5,29 @@ import { Button, ControlledTextField, Typography, useFormHook } from '@/componen
 import s from './form.module.scss'
 
 export const Form = memo(() => {
-  const { control, submitFormHandler } = useFormHook()
+  const { control, errors, formRef, submitFormHandler } = useFormHook()
 
   return (
-    <form className={s.form} onSubmit={submitFormHandler}>
+    <form className={s.form} onSubmit={submitFormHandler} ref={formRef}>
       <div className={s.fields}>
         <ControlledTextField
           as={'input'}
           control={control}
+          errorMessage={errors.name?.message}
           name={'name'}
           placeholder={'Introduce yourself'}
         />
         <ControlledTextField
           as={'input'}
           control={control}
+          errorMessage={errors.name?.message}
           name={'email'}
           placeholder={'Enter email address'}
         />
         <ControlledTextField
           as={'textarea'}
           control={control}
+          errorMessage={errors.message?.message}
           name={'message'}
           placeholder={'Your question'}
         />
