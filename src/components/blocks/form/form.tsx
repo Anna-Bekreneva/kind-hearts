@@ -7,6 +7,8 @@ import s from './form.module.scss'
 export const Form = memo(() => {
   const { control, errors, formRef, submitFormHandler } = useFormHook()
 
+  console.log(!!Object.keys(errors))
+
   return (
     <form className={s.form} onSubmit={submitFormHandler} ref={formRef}>
       <div className={s.fields}>
@@ -39,7 +41,7 @@ export const Form = memo(() => {
         </Typography>
         .
       </Typography>
-      <Button className={s.button} type={'submit'}>
+      <Button className={s.button} disabled={!!Object.keys(errors).length} type={'submit'}>
         Submit
       </Button>
     </form>
