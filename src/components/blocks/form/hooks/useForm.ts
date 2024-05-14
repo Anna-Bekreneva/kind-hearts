@@ -26,7 +26,7 @@ export const useFormHook = () => {
 
   const formRef = useRef<HTMLFormElement | null>(null)
 
-  const submitHandler = (data: ConsultationFormSchemaType) => {
+  const submitHandler = () => {
     if (formRef.current) {
       emailjs
         .sendForm('service_59nrloi', 'template_ny0dukf', formRef.current, 'ZRpAqdMxMWVFZzQAv')
