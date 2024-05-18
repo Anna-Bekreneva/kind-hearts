@@ -100,7 +100,7 @@ const DirectionsItems = () => (
 )
 
 const NoList = () => (
-  <ul>
+  <ul className={s.no}>
     {noList.map((item, index) => (
       <Typography as={'li'} key={index} variant={TypographyVariant.slogan}>
         {item}

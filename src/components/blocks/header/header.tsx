@@ -33,7 +33,7 @@ export const Header = () => {
           >
             <Logo />
             <BurgerButton isOpen={isOpenMenu} ref={burgerButtonRef} setIsOpen={setIsOpenMenu} />
-            <Menu ref={menuWrapperRef} setIsOpen={setIsOpenMenu} />
+            <Menu open={isOpenMenu} ref={menuWrapperRef} setIsOpen={setIsOpenMenu} />
             <motion.div className={s.background} variants={backgroundVariants} />
           </motion.nav>
         </div>

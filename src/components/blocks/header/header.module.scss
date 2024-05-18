@@ -3,6 +3,11 @@
 .header {
   height: 123px;
   background-color: var(--color-white);
+
+  /* stylelint-disable-next-line */
+  @include mq(sm) {
+    height: 82px;
+  }
 }
 
 .fixed {
@@ -40,4 +45,9 @@
   max-width: 320px;
 
   background-color: var(--color-white);
+
+  /* stylelint-disable-next-line */
+  @include mq(sm) {
+    top: -10px;
+  }
 }

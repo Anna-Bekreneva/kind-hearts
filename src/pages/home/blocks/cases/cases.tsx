@@ -1,5 +1,3 @@
-import { memo } from 'react'
-
 import { TypographyVariant } from '@/common'
 import { CaseCard, Typography } from '@/components'
 import { A11y, Navigation, Pagination } from 'swiper/modules'
