@@ -10,7 +10,7 @@ const supports: SupportCardProps[] = [
   { subtitle: 'tax free', title: '- $ 100' },
 ]
 
-export const StateSupports = memo(() => {
+export const StateSupports = () => {
   return (
     <section className={'section'} id={'state-support'}>
       <div className={'container'}>
@@ -40,7 +40,7 @@ export const StateSupports = memo(() => {
       </div>
     </section>
   )
-})
+}
 
 type SupportCardProps = {
   subtitle: string

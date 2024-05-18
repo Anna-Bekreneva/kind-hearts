@@ -1,5 +1,3 @@
-import { memo } from 'react'
-
 import { TypographyVariant } from '@/common'
 import { Typography } from '@/components'
 import { Advantage, AdvantageType } from '@/pages'
@@ -25,7 +23,7 @@ const advantagesData: AdvantageType[] = [
   },
 ]
 
-export const Advantages = memo(() => {
+export const Advantages = () => {
   return (
     <section>
       <Typography as={'h2'} className={'sr-only'}>
@@ -57,4 +55,4 @@ export const Advantages = memo(() => {
       </div>
     </section>
   )
-})
+}

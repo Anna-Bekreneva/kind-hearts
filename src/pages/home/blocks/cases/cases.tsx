@@ -1,5 +1,3 @@
-import { memo } from 'react'
-
 import { TypographyVariant } from '@/common'
 import { CaseCard, Typography } from '@/components'
 import { A11y, Navigation, Pagination } from 'swiper/modules'
@@ -93,7 +91,7 @@ const dataCases: DataCasesType[] = [
   },
 ]
 
-export const Cases = memo(() => {
+export const Cases = () => {
   const swiperBreakpoints = {
     0: { slidesPerGroup: 1, slidesPerView: 1 },
     560: { slidesPerGroup: 1, slidesPerView: 1.5 },
@@ -110,10 +108,6 @@ export const Cases = memo(() => {
           <Swiper
             breakpoints={swiperBreakpoints}
             modules={[Navigation, Pagination, A11y]}
-            // navigation={{
-            //   nextEl: `${s.swiperButtonNext} button`,
-            //   prevEl: '${s.swiperButtonPrev} button',
-            // }}
             navigation
             pagination={{ clickable: true, dynamicBullets: true }}
             spaceBetween={20}
@@ -140,4 +134,4 @@ export const Cases = memo(() => {
       </div>
     </section>
   )
-})
+}

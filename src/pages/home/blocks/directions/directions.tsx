@@ -1,5 +1,3 @@
-import { memo } from 'react'
-
 import { TypographyVariant } from '@/common'
 import { DirectionCard, DirectionPropsType, Typography } from '@/components'
 
@@ -12,18 +10,20 @@ const directionsData: DirectionPropsType[] = [
       basePath: '/assets/images/directions/people/people',
     },
     linkTo: '',
-    text: [
-      <p>
-        Our charitable foundation regularly provides assistance to&nbsp;low-income families
-        in&nbsp;many areas. Among our clients there are people who have suffered from military
-        conflicts, loss of&nbsp;property, and emigration.
-      </p>,
-      <p>
-        With our help, you can send money, food and any goods to&nbsp;the war zone.
-        We&nbsp;do&nbsp;not adhere to&nbsp;any political views, we&nbsp;simply help everyone who
-        needs help.
-      </p>,
-    ],
+    text: (
+      <>
+        <p>
+          Our charitable foundation regularly provides assistance to&nbsp;low-income families
+          in&nbsp;many areas. Among our clients there are people who have suffered from military
+          conflicts, loss of&nbsp;property, and emigration.
+        </p>
+        <p>
+          With our help, you can send money, food and any goods to&nbsp;the war zone.
+          We&nbsp;do&nbsp;not adhere to&nbsp;any political views, we&nbsp;simply help everyone who
+          needs help.
+        </p>
+      </>
+    ),
     title: 'Helping people in need',
   },
   {
@@ -32,23 +32,27 @@ const directionsData: DirectionPropsType[] = [
       basePath: '/assets/images/directions/animals/animals',
     },
     linkTo: '',
-    text: [
-      <p>
-        Every puppy in&nbsp;the shelter needs a&nbsp;home and kind hands. The best thing you can
-        do&nbsp;is&nbsp;to&nbsp;choose a&nbsp;pet from our care and either take it&nbsp;home
-        or&nbsp;become its personal curator. Become a&nbsp;member of&nbsp;our big family and gain
-        a&nbsp;loyal friend!
-      </p>,
-      <p>
-        You can also help animals by&nbsp;making a&nbsp;donation for their needs. All money, things
-        and food will be&nbsp;transferred to&nbsp;shelters.
-      </p>,
-    ],
+    text: (
+      <>
+        <p>
+          Every puppy in&nbsp;the shelter needs a&nbsp;home and kind hands. The best thing you can
+          do&nbsp;is&nbsp;to&nbsp;choose a&nbsp;pet from our care and either take it&nbsp;home
+          or&nbsp;become its personal curator. Become a&nbsp;member of&nbsp;our big family and gain
+          a&nbsp;loyal friend!
+        </p>
+        <p>
+          You can also help animals by&nbsp;making a&nbsp;donation for their needs. All money,
+          things and food will be&nbsp;transferred to&nbsp;shelters.
+        </p>
+      </>
+    ),
     title: 'Helping homeless animals',
   },
 ]
 
-export const Directions = memo(() => {
+const noList = ['no religion', 'no nation', 'no politics', 'no borders']
+
+export const Directions = () => {
   return (
     <section className={s.section} id={'directions'}>
       <div className={'container'}>
@@ -72,34 +76,35 @@ export const Directions = memo(() => {
               </Typography>
             </div>
           </div>
-          <ul className={s.no}>
-            <Typography as={'li'} variant={TypographyVariant.slogan}>
-              no religion
-            </Typography>
-            <Typography as={'li'} variant={TypographyVariant.slogan}>
-              no nation
-            </Typography>
-            <Typography as={'li'} variant={TypographyVariant.slogan}>
-              no politics
-            </Typography>
-            <Typography as={'li'} variant={TypographyVariant.slogan}>
-              no borders
-            </Typography>
-          </ul>
+          <NoList />
         </div>
-        <ul className={s.items}>
-          {directionsData.map((direction, index) => (
-            <li className={s.item} key={index}>
-              <DirectionCard
-                img={direction.img}
-                linkTo={direction.linkTo}
-                text={direction.text}
-                title={direction.title}
-              />
-            </li>
-          ))}
-        </ul>
+        <DirectionsItems />
       </div>
     </section>
   )
-})
+}
+
+const DirectionsItems = () => (
+  <ul className={s.items}>
+    {directionsData.map((direction, index) => (
+      <li className={s.item} key={index}>
+        <DirectionCard
+          img={direction.img}
+          linkTo={direction.linkTo}
+          text={direction.text}
+          title={direction.title}
+        />
+      </li>
+    ))}
+  </ul>
+)
+
+const NoList = () => (
+  <ul className={s.no}>
+    {noList.map((item, index) => (
+      <Typography as={'li'} key={index} variant={TypographyVariant.slogan}>
+        {item}
+      </Typography>
+    ))}
+  </ul>
+)

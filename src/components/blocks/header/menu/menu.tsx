@@ -25,12 +25,13 @@ const mobileMenu = [
 ]
 
 type Props = {
+  open: boolean
   setIsOpen: (value: boolean) => void
 }
 
-export const Menu = forwardRef<HTMLDivElement, Props>(({ setIsOpen }, ref) => {
+export const Menu = forwardRef<HTMLDivElement, Props>(({ open, setIsOpen }, ref) => {
   return (
-    <div className={s.wrapper} id={'burger-menu'} ref={ref} role={'menu'}>
+    <div className={s.wrapper} data-open={open} id={'burger-menu'} ref={ref} role={'menu'}>
       <div className={s.menu}>
         <motion.ul className={s.items} variants={parentStaggerVariants}>
           {menu.map((item, index) => (

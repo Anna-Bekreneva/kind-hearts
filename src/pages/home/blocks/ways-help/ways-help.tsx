@@ -1,11 +1,9 @@
-import { memo } from 'react'
-
 import { TypographyVariant } from '@/common'
 import { Typography } from '@/components'
 
 import s from './ways-help.module.scss'
 
-export const WaysHelp = memo(() => {
+export const WaysHelp = () => {
   return (
     <section className={'section'} id={'ways-help'}>
       <div className={'container'}>
@@ -43,4 +41,4 @@ export const WaysHelp = memo(() => {
       </div>
     </section>
   )
-})
+}

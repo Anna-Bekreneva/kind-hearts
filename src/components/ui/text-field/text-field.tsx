@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ElementType, memo, useState } from 'react'
+import { ChangeEvent, ComponentPropsWithoutRef, ElementType, forwardRef, useState } from 'react'
 
 import { AlertIcon, Typography } from '@/components'
 
@@ -9,7 +9,7 @@ export type TextFieldProps<T extends ElementType> = {
   errorMessage?: string
   onValueChange?: (value: string) => void
 } & ComponentPropsWithoutRef<T>
-export const TextField = memo(<T extends ElementType = 'input'>(props: TextFieldProps<T>) => {
+export const TextField = forwardRef<HTMLDivElement, TextFieldProps<ElementType>>((props, ref) => {
   const { as: Tag = 'input', className, errorMessage, onValueChange, ...rest } = props
 
   const [isShowError, setIsShowError] = useState(false)
@@ -20,13 +20,16 @@ export const TextField = memo(<T extends ElementType = 'input'>(props: TextField
   }`
   const containerClassName = `${className} ${s.container} ${errorMessage ? s.errorContainer : ''}`
 
+  const changeHandler = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+    onValueChange?.(e.currentTarget.value)
+
   return (
-    <div className={containerClassName}>
+    <div className={containerClassName} ref={ref}>
       <Tag
         aria-describedby={isShowError ? 'errorMessage' : undefined}
         aria-invalid={!!errorMessage}
         className={fieldClassName}
-        onChange={e => onValueChange?.(e.currentTarget.value)}
+        onChange={changeHandler}
         {...rest}
       />
       {errorMessage && (

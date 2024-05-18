@@ -1,4 +1,3 @@
-import { memo } from 'react'
 import { Link } from 'react-router-dom'
 
 import { LogoVariant } from '@/common'
@@ -9,7 +8,7 @@ type Props = {
   to?: string
   variant?: keyof typeof LogoVariant
 }
-export const Logo = memo(({ to = '/', variant }: Props) => {
+export const Logo = ({ to = '/', variant }: Props) => {
   const linkClassName = `${s.logo} ${variant ? s[String(variant)] : s.standard}`
 
   const logoHorizontal = '/assets/images/logo/logo-horizontal.svg'
@@ -31,4 +30,4 @@ export const Logo = memo(({ to = '/', variant }: Props) => {
       )}
     </Link>
   )
-})
+}

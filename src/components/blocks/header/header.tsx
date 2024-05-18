@@ -1,12 +1,10 @@
-import { memo } from 'react'
-
 import { BurgerButton, Logo, Menu, useHeader } from '@/components'
 import { backgroundVariants, overlayVariants } from '@/utils'
 import { AnimatePresence, motion } from 'framer-motion'
 
 import s from './header.module.scss'
 
-export const Header = memo(() => {
+export const Header = () => {
   const { burgerButtonRef, height, isOpenMenu, menuWrapperRef, navigationRef, setIsOpenMenu } =
     useHeader()
 
@@ -35,11 +33,11 @@ export const Header = memo(() => {
           >
             <Logo />
             <BurgerButton isOpen={isOpenMenu} ref={burgerButtonRef} setIsOpen={setIsOpenMenu} />
-            <Menu ref={menuWrapperRef} setIsOpen={setIsOpenMenu} />
+            <Menu open={isOpenMenu} ref={menuWrapperRef} setIsOpen={setIsOpenMenu} />
             <motion.div className={s.background} variants={backgroundVariants} />
           </motion.nav>
         </div>
       </div>
     </header>
   )
-})
+}

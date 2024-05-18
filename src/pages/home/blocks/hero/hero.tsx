@@ -1,11 +1,9 @@
-import { memo } from 'react'
-
 import { TypographyVariant } from '@/common'
 import { Button, Typography } from '@/components'
 
 import s from './hero.module.scss'
 
-export const Hero = memo(() => {
+export const Hero = () => {
   return (
     <section className={s.section}>
       <div className={'container'}>
@@ -39,4 +37,4 @@ export const Hero = memo(() => {
       </div>
     </section>
   )
-})
+}

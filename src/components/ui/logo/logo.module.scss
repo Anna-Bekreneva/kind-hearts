@@ -2,12 +2,15 @@
 
 .logo {
   display: inline-block;
+
   width: 100%;
+
+  border-radius: 4px;
   outline: 0;
+
   transition:
     box-shadow 0.3s,
     border-radius 0.3s;
-  border-radius: 4px;
 
   &:focus-visible {
     box-shadow: var(--shadow-focus);
@@ -25,9 +28,7 @@
   height: 40px;
 }
 
-/* stylelint-disable-next-line */
 .logo {
-  /* stylelint-disable-next-line */
   @include mq(sm) {
     max-width: 176px;
     height: 40px;
