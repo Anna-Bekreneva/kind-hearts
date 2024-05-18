@@ -9,7 +9,7 @@ import s from './direction-card.module.scss'
 export type DirectionPropsType = {
   img: { alt: string; basePath: string }
   linkTo: string
-  text: ReactNode[]
+  text: ReactNode
   title: string
 }
 export const DirectionCard = memo(({ img, linkTo, text, title }: DirectionPropsType) => {
@@ -32,11 +32,7 @@ export const DirectionCard = memo(({ img, linkTo, text, title }: DirectionPropsT
         {title}
       </Typography>
 
-      <div className={s.text}>
-        {text.map((element, index) => (
-          <Typography key={index}> {element} </Typography>
-        ))}
-      </div>
+      <div className={s.text}>{text}</div>
 
       <Button as={Link} className={s.link} to={linkTo}>
         Want to help

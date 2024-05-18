@@ -1,10 +1,8 @@
-import { memo } from 'react'
-
 import { Button, ControlledTextField, Typography, useFormHook } from '@/components'
 
 import s from './form.module.scss'
 
-export const Form = memo(() => {
+export const Form = () => {
   const { control, errors, formRef, submitFormHandler } = useFormHook()
 
   return (
@@ -44,4 +42,4 @@ export const Form = memo(() => {
       </Button>
     </form>
   )
-})
+}

@@ -1,8 +1,6 @@
-import { memo } from 'react'
-
 import s from './footer.module.scss'
 
-export const Footer = memo(() => {
+export const Footer = () => {
   return (
     <footer className={`${s.section} section`}>
       <div className={'container'}>
@@ -23,4 +21,4 @@ export const Footer = memo(() => {
       </div>
     </footer>
   )
-})
+}
