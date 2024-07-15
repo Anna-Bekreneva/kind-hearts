@@ -1,4 +1,3 @@
-export * from './hero'
 export * from './advantages'
 export * from './directions'
 export * from './ways-help'

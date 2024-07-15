@@ -1,11 +1,10 @@
-import { Footer, Header } from '@/components'
+import { Footer, Header, Hero } from '@/components'
 import {
   Advantages,
   Cases,
   Consultation,
   Contacts,
   Directions,
-  Hero,
   Questions,
   StateSupports,
   WaysHelp,

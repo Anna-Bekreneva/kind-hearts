@@ -1,0 +1,34 @@
+@import '../../../../../styles/mixins';
+
+.container {
+  /* stylelint-disable-next-line */
+  @include mq(md, min) {
+    max-width: 900px;
+    width: 100%;
+  }
+
+  /* stylelint-disable-next-line */
+  @include mq(lg, min) {
+    padding-left: 80px;
+  }
+}
+
+.block {
+  &:not(:last-child) {
+    margin-bottom: 80px;
+  }
+}
+
+.descr {
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.text {
+  * {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
