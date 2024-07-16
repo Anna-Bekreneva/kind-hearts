@@ -5,6 +5,7 @@ export const TypographyVariant = {
   subtitle2: 'subtitle2',
   text: 'text',
   title: 'title',
+  overline: 'overline'
 } as const
 
 export const ButtonVariant = {

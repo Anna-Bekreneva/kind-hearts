@@ -1,4 +1,4 @@
-import { Typography } from '@/components'
+import {Typography} from '@/components'
 
 import s from './content.module.scss'
 
@@ -110,6 +110,361 @@ export const PrivacyPolicyContent = () => {
                 individual is&nbsp;accessing or&nbsp;using the Service, as&nbsp;applicable.
               </Typography>
             </ul>
+          </div>
+        </div>
+      </div>
+      <div className={s.block}>
+        <Typography as={'h3'} variant={'title'}>
+          2. Collecting and&nbsp;Using Your Personal Data
+        </Typography>
+        <div className={s.descr}>
+          <div className={s.text}>
+            <Typography as={'h4'} variant={'subtitle1'}>
+              Types of&nbsp;Data Collected
+            </Typography>
+            <Typography as={'h5'} variant={'overline'}>
+              Personal Data
+            </Typography>
+            <Typography>
+              While using Our Service, We&nbsp;may ask You to&nbsp;provide Us&nbsp;with certain personally identifiable
+              information that can be&nbsp;used to&nbsp;contact or&nbsp;identify&nbsp;You. Personally identifiable
+              information may include, but is&nbsp;not limited to:
+            </Typography>
+            <ul className={s.text}>
+              <Typography as={'li'}>
+                Email address
+              </Typography>
+              <Typography as={'li'}>
+                First name and last name
+              </Typography>
+              <Typography as={'li'}>
+                Usage Data
+              </Typography>
+            </ul>
+          </div>
+        </div>
+        <div className={s.descr}>
+          <div className={s.text}>
+            <Typography as={'h5'} variant={'overline'}>
+              Usage Data
+            </Typography>
+            <Typography>
+              Usage Data is&nbsp;collected automatically when using the Service.
+            </Typography>
+            <Typography>
+              Usage Data may include information such as&nbsp;Your Device’s&nbsp;Internet Protocol address (e.g.
+              IP&nbsp;address), browser type, browser version, the pages of&nbsp;our Service that You visit, the time
+              and date of&nbsp;Your visit, the time spent on&nbsp;those pages, unique device identifiers and other
+              diagnostic data.
+            </Typography>
+            <Typography>
+              When You access the Service by&nbsp;or&nbsp;through a&nbsp;mobile device, We&nbsp;may collect certain
+              information automatically, including, but not limited to, the type of&nbsp;mobile device You use, Your
+              mobile device unique ID, the IP&nbsp;address of&nbsp;Your mobile device, Your mobile operating system, the
+              type of&nbsp;mobile Internet browser You use, unique device identifiers and other diagnostic data.
+            </Typography>
+            <Typography>
+              We&nbsp;may also collect information that Your browser sends whenever You visit our Service or&nbsp;when
+              You access the Service by&nbsp;or&nbsp;through a&nbsp;mobile device.
+            </Typography>
+          </div>
+        </div>
+        <div className={s.descr}>
+          <div className={s.text}>
+            <Typography as={'h5'} variant={'overline'}>
+              Tracking Technologies and Cookies
+            </Typography>
+            <Typography>
+              We&nbsp;use Cookies and similar tracking technologies to&nbsp;track the activity on&nbsp;Our Service and
+              store certain information. Tracking technologies used are beacons, tags, and scripts to&nbsp;collect and
+              track information and to&nbsp;improve and analyze Our Service. The technologies We&nbsp;use may include:
+            </Typography>
+            <ul>
+              <Typography as={'li'}>
+                <b>Cookies or&nbsp;Browser Cookies.</b>&nbsp;A&nbsp;cookie is&nbsp;a&nbsp;small file placed on&nbsp;Your
+                Device. You can instruct Your browser to&nbsp;refuse all Cookies or&nbsp;to&nbsp;indicate when
+                a&nbsp;Cookie is&nbsp;being sent. However, if&nbsp;You do&nbsp;not accept Cookies, You may not
+                be&nbsp;able to&nbsp;use some parts of&nbsp;our Service. Unless you have adjusted Your browser setting
+                so&nbsp;that it&nbsp;will refuse Cookies, our Service may use Cookies.
+              </Typography>
+              <Typography as={'li'}>
+                <b>Web Beacons.</b>&nbsp;Certain sections of&nbsp;our Service and our emails may contain small
+                electronic files known as&nbsp;web beacons (also referred to&nbsp;as&nbsp;clear gifs, pixel tags, and
+                single-pixel gifs) that permit the Company, for example, to&nbsp;count users who have visited those
+                pages or&nbsp;opened an&nbsp;email and for other related website statistics (for example, recording the
+                popularity of&nbsp;a&nbsp;certain section and verifying system and server integrity).
+              </Typography>
+            </ul>
+            <Typography>
+              Cookies can be&nbsp;«Persistent» or&nbsp;«Session» Cookies. Persistent Cookies remain on&nbsp;Your
+              personal computer or&nbsp;mobile device when You go&nbsp;offline, while Session Cookies are deleted
+              as&nbsp;soon as&nbsp;You close Your web browser. Learn more about cookies on&nbsp;the Free Privacy Policy
+              website article.
+            </Typography>
+            <Typography>
+              We&nbsp;use both Session and Persistent Cookies for the purposes set out below:
+            </Typography>
+            <ul>
+              {/* todo: попробовать через dl */}
+              <Typography as={'li'} className={s.text}>
+                <b>Necessary / Essential Cookies</b>
+                <Typography>
+                  Type: Session Cookies
+                </Typography>
+                <Typography>
+                  Administered by: Us
+                </Typography>
+                <Typography>
+                  Purpose: These Cookies are essential to&nbsp;provide You with services available through the Website
+                  and to&nbsp;enable You to&nbsp;use some of&nbsp;its features. They help to&nbsp;authenticate users and
+                  prevent fraudulent use of&nbsp;user accounts. Without these Cookies, the services that You have asked
+                  for cannot be&nbsp;provided, and We&nbsp;only use these Cookies to&nbsp;provide You with those
+                  services.
+                </Typography>
+              </Typography>
+              <Typography as={'li'} className={s.text}>
+                <b>Cookies Policy / Notice Acceptance Cookies</b>
+                <Typography>
+                  Type: Persistent Cookies
+                </Typography>
+                <Typography>
+                  Administered by: Us
+                </Typography>
+                <Typography>
+                  Purpose: These Cookies identify if&nbsp;users have accepted the use of&nbsp;cookies on&nbsp;the
+                  Website.
+                </Typography>
+              </Typography>
+              <Typography as={'li'} className={s.text}>
+                <b>Functionality Cookies</b>
+                <Typography>
+                  Type: Persistent Cookies
+                </Typography>
+                <Typography>
+                  Administered by: Us&nbsp;Purpose: These Cookies allow us&nbsp;to&nbsp;remember choices You make when
+                  You use the Website, such as&nbsp;remembering your login details or&nbsp;language preference. The
+                  purpose of&nbsp;these Cookies is&nbsp;to&nbsp;provide You with a&nbsp;more personal experience and
+                  to&nbsp;avoid You having to&nbsp;re-enter your preferences every time You use the Website.
+                </Typography>
+                <Typography>
+                  For more information about the cookies we&nbsp;use and your choices regarding cookies, please visit
+                  our Cookies Policy or&nbsp;the Cookies section of&nbsp;our Privacy Policy.
+                </Typography>
+              </Typography>
+            </ul>
+          </div>
+        </div>
+        <div className={s.descr}>
+          <div className={s.text}>
+            <Typography as={'h4'} variant={'subtitle1'}>
+              Use of&nbsp;Your Personal Data
+            </Typography>
+            <Typography>
+              The Company may use Personal Data for the following purposes:
+            </Typography>
+            <ul className={s.text}>
+              <Typography as={'li'}>
+                <b>To&nbsp;provide and maintain our Service,</b> including to&nbsp;monitor the usage of&nbsp;our
+                Service.
+              </Typography>
+              <Typography as={'li'}>
+                <b>To&nbsp;manage Your Account:</b> the development, compliance and undertaking of&nbsp;the purchase
+                contract for the products, items or&nbsp;services You have purchased or&nbsp;of&nbsp;any other contract
+                with Us&nbsp;through the Service.
+              </Typography>
+              <Typography as={'li'}>
+                <b>For the performance of&nbsp;a&nbsp;contract:</b> to&nbsp;manage Your registration as&nbsp;a&nbsp;user
+                of&nbsp;the Service. The Personal Data You provide can give You access to&nbsp;different functionalities
+                of&nbsp;the Service that are available to&nbsp;You as&nbsp;a&nbsp;registered user.
+              </Typography>
+              <Typography as={'li'}>
+                <b>To&nbsp;contact You:</b> To&nbsp;contact You by&nbsp;email, telephone calls, SMS, or&nbsp;other
+                equivalent forms of&nbsp;electronic communication, such as&nbsp;a&nbsp;mobile application’s&nbsp;push
+                notifications regarding updates or&nbsp;informative communications related to&nbsp;the functionalities,
+                products or&nbsp;contracted services, including the security updates, when necessary or&nbsp;reasonable
+                for their implementation.
+              </Typography>
+              <Typography as={'li'}>
+                <b>To&nbsp;provide You</b>&nbsp;with news, special offers and general information about other goods,
+                services and events which we&nbsp;offer that are similar to&nbsp;those that you have already purchased
+                or&nbsp;enquired about unless You have opted not to&nbsp;receive such information.
+              </Typography>
+              <Typography as={'li'}>
+                <b>To&nbsp;manage Your requests:</b> To&nbsp;attend and manage Your requests to&nbsp;Us.
+              </Typography>
+              <Typography as={'li'}>
+                <b>For business transfers:</b> We&nbsp;may use Your information to&nbsp;evaluate or&nbsp;conduct
+                a&nbsp;merger, divestiture, restructuring, reorganization, dissolution, or&nbsp;other sale
+                or&nbsp;transfer of&nbsp;some or&nbsp;all of&nbsp;Our assets, whether as&nbsp;a&nbsp;going concern
+                or&nbsp;as&nbsp;part of&nbsp;bankruptcy, liquidation, or&nbsp;similar proceeding, in&nbsp;which Personal
+                Data held by&nbsp;Us&nbsp;about our Service users is&nbsp;among the assets transferred.
+              </Typography>
+              <Typography as={'li'}>
+                <b>For other purposes:</b> We&nbsp;may use Your information for other purposes, such as&nbsp;data
+                analysis, identifying usage trends, determining the effectiveness of&nbsp;our promotional campaigns and
+                to&nbsp;evaluate and improve our Service, products, services, marketing and your experience.
+              </Typography>
+            </ul>
+            <Typography>
+              We&nbsp;may share Your personal information in&nbsp;the following situations:
+            </Typography>
+            <ul className={s.text}>
+              <Typography as={'li'}>
+                <b>With Service Providers:</b> We&nbsp;may share Your personal information with Service Providers
+                to&nbsp;monitor and analyze the use of&nbsp;our Service, to&nbsp;contact&nbsp;You.
+              </Typography>
+              <Typography as={'li'}>
+                <b>For business transfers:</b> We&nbsp;may share or&nbsp;transfer Your personal information
+                in&nbsp;connection with, or&nbsp;during negotiations of, any merger, sale of&nbsp;Company assets,
+                financing, or&nbsp;acquisition of&nbsp;all or&nbsp;a&nbsp;portion of&nbsp;Our business to&nbsp;another
+                company.
+              </Typography>
+              <Typography as={'li'}>
+                <b>With Affiliates:</b> We&nbsp;may share Your information with Our affiliates, in&nbsp;which case
+                we&nbsp;will require those affiliates to&nbsp;honor this Privacy Policy. Affiliates include Our parent
+                company and any other subsidiaries, joint venture partners or&nbsp;other companies that We&nbsp;control
+                or&nbsp;that are under common control with&nbsp;Us.
+              </Typography>
+              <Typography as={'li'}>
+                <b>With business partners:</b> We&nbsp;may share Your information with Our business partners
+                to&nbsp;offer You certain products, services or&nbsp;promotions.
+              </Typography>
+              <Typography as={'li'}>
+                <b>With other users:</b>&nbsp;when You share personal information or&nbsp;otherwise interact in&nbsp;the
+                public areas with other users, such information may be&nbsp;viewed by&nbsp;all users and may
+                be&nbsp;publicly distributed outside.
+              </Typography>
+              <Typography as={'li'}>
+                <b>With Your consent:</b> We&nbsp;may disclose Your personal information for any other purpose with Your
+                consent.
+              </Typography>
+            </ul>
+          </div>
+        </div>
+        <div className={s.descr}>
+          <div className={s.text}>
+            <Typography as={'h4'} variant={'subtitle1'}>
+              Retention of Your Personal Data
+            </Typography>
+            <Typography>
+              The Company will retain Your Personal Data only for as&nbsp;long as&nbsp;is&nbsp;necessary for the
+              purposes set out in&nbsp;this Privacy Policy. We&nbsp;will retain and use Your Personal Data to&nbsp;the
+              extent necessary to&nbsp;comply with our legal obligations (for example, if&nbsp;we&nbsp;are required
+              to&nbsp;retain your data to&nbsp;comply with applicable laws), resolve disputes, and enforce our legal
+              agreements and policies.
+            </Typography>
+            <Typography>
+              The Company will also retain Usage Data for internal analysis purposes. Usage Data is&nbsp;generally
+              retained for a&nbsp;shorter period of&nbsp;time, except when this data is&nbsp;used to&nbsp;strengthen the
+              security or&nbsp;to&nbsp;improve the functionality of&nbsp;Our Service, or&nbsp;We&nbsp;are legally
+              obligated to&nbsp;retain this data for longer time periods.
+            </Typography>
+          </div>
+        </div>
+        <div className={s.descr}>
+          <div className={s.text}>
+            <Typography as={'h4'} variant={'subtitle1'}>
+              Transfer of&nbsp;Your Personal Data
+            </Typography>
+            <Typography>
+              Your information, including Personal Data, is&nbsp;processed at&nbsp;the Company’s&nbsp;operating offices
+              and in&nbsp;any other places where the parties involved in&nbsp;the processing are located. It&nbsp;means
+              that this information may be&nbsp;transferred to&nbsp;— and maintained on&nbsp;— computers located outside
+              of&nbsp;Your state, province, country or&nbsp;other governmental jurisdiction where the data protection
+              laws may differ than those from Your jurisdiction.
+            </Typography>
+            <Typography>
+              Your consent to&nbsp;this Privacy Policy followed by&nbsp;Your submission of&nbsp;such information
+              represents Your agreement to&nbsp;that transfer.
+            </Typography>
+            <Typography>
+              The Company will take all steps reasonably necessary to&nbsp;ensure that Your data is&nbsp;treated
+              securely and in&nbsp;accordance with this Privacy Policy and no&nbsp;transfer of&nbsp;Your Personal Data
+              will take place to&nbsp;an&nbsp;organization or&nbsp;a&nbsp;country unless there are adequate controls
+              in&nbsp;place including the security of&nbsp;Your data and other personal information.
+            </Typography>
+          </div>
+        </div>
+        <div className={s.descr}>
+          <div className={s.text}>
+            <Typography as={'h4'} variant={'subtitle1'}>
+              Delete Your Personal Data
+            </Typography>
+            <Typography>
+              You have the right to&nbsp;delete or&nbsp;request that We&nbsp;assist in&nbsp;deleting the Personal Data
+              that We&nbsp;have collected about You.
+            </Typography>
+            <Typography>
+              Our Service may give You the ability to&nbsp;delete certain information about You from within the Service.
+            </Typography>
+            <Typography>
+              You may update, amend, or&nbsp;delete Your information at&nbsp;any time by&nbsp;signing
+              in&nbsp;to&nbsp;Your Account, if&nbsp;you have one, and visiting the account settings section that allows
+              you to&nbsp;manage Your personal information. You may also contact Us&nbsp;to&nbsp;request access to,
+              correct, or&nbsp;delete any personal information that You have provided to&nbsp;Us.
+            </Typography>
+            <Typography>
+              Please note, however, that We&nbsp;may need to&nbsp;retain certain information when we&nbsp;have
+              a&nbsp;legal obligation or&nbsp;lawful basis to&nbsp;do&nbsp;so.
+            </Typography>
+          </div>
+        </div>
+        <div className={s.descr}>
+          <div className={s.text}>
+            <Typography as={'h4'} variant={'subtitle1'}>
+              Disclosure of Your Personal Data
+            </Typography>
+            <Typography as={'h5'} variant={'overline'}>
+              Business Transactions
+            </Typography>
+            <Typography>
+              If&nbsp;the Company is&nbsp;involved in&nbsp;a&nbsp;merger, acquisition or&nbsp;asset sale, Your Personal
+              Data may be&nbsp;transferred. We&nbsp;will provide notice before Your Personal Data is&nbsp;transferred
+              and becomes subject to&nbsp;a&nbsp;different Privacy Policy.
+            </Typography>
+            <Typography as={'h5'} variant={'overline'}>
+              Law enforcement
+            </Typography>
+            <Typography>
+              Under certain circumstances, the Company may be&nbsp;required to&nbsp;disclose Your Personal Data
+              if&nbsp;required to&nbsp;do&nbsp;so&nbsp;by&nbsp;law or&nbsp;in&nbsp;response to&nbsp;valid requests
+              by&nbsp;public authorities (e.g. a&nbsp;court or&nbsp;a&nbsp;government agency).
+            </Typography>
+
+            <Typography as={'h5'} variant={'overline'}>
+              Other legal requirements
+            </Typography>
+            <Typography>
+              The Company may disclose Your Personal Data in&nbsp;the good faith belief that such action
+              is&nbsp;necessary to:
+            </Typography>
+            <ul>
+              <Typography as={'li'}>
+                Comply with a&nbsp;legal obligation
+              </Typography>
+              <Typography as={'li'}>
+                Protect and defend the rights or&nbsp;property of&nbsp;the Company
+              </Typography>
+              <Typography as={'li'}>
+                Prevent or&nbsp;investigate possible wrongdoing in&nbsp;connection with the Service
+              </Typography>
+              <Typography as={'li'}>
+                Protect the personal safety of&nbsp;Users of&nbsp;the Service or&nbsp;the public
+              </Typography>
+              <Typography as={'li'}>
+                Protect against legal liability
+              </Typography>
+            </ul>
+
+            <Typography as={'h5'} variant={'overline'}>
+              Security of&nbsp;Your Personal Data
+            </Typography>
+            <Typography>
+              The security of&nbsp;Your Personal Data is&nbsp;important to&nbsp;Us, but remember that no&nbsp;method
+              of&nbsp;transmission over the Internet, or&nbsp;method of&nbsp;electronic storage is&nbsp;100% secure.
+              While We&nbsp;strive to&nbsp;use commercially acceptable means to&nbsp;protect Your Personal Data,
+              We&nbsp;cannot guarantee its absolute security.
+            </Typography>
           </div>
         </div>
       </div>
