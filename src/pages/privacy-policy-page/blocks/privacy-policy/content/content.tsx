@@ -31,7 +31,7 @@ export const PrivacyPolicyContent = () => {
         <Typography as={'h3'} variant={'title'}>
           1. Interpretation and&nbsp;Definitions
         </Typography>
-        <div className={s.descr}>
+        <div>
           <div className={s.text}>
             <Typography as={'h4'} variant={'subtitle1'}>
               Interpretation
@@ -43,7 +43,7 @@ export const PrivacyPolicyContent = () => {
             </Typography>
           </div>
         </div>
-        <div className={s.descr}>
+        <div>
           <div className={s.text}>
             <Typography as={'h4'} variant={'subtitle1'}>
               Definitions
@@ -118,7 +118,7 @@ export const PrivacyPolicyContent = () => {
         <Typography as={'h3'} variant={'title'}>
           2. Collecting and&nbsp;Using Your Personal Data
         </Typography>
-        <div className={s.descr}>
+        <div>
           <div className={s.text}>
             <Typography as={'h4'} variant={'subtitle1'}>
               Types of&nbsp;Data Collected
@@ -144,7 +144,7 @@ export const PrivacyPolicyContent = () => {
             </ul>
           </div>
         </div>
-        <div className={s.descr}>
+        <div>
           <div className={s.text}>
             <Typography as={'h5'} variant={'overline'}>
               Usage Data
@@ -170,7 +170,7 @@ export const PrivacyPolicyContent = () => {
             </Typography>
           </div>
         </div>
-        <div className={s.descr}>
+        <div>
           <div className={s.text}>
             <Typography as={'h5'} variant={'overline'}>
               Tracking Technologies and Cookies
@@ -255,7 +255,7 @@ export const PrivacyPolicyContent = () => {
             </ul>
           </div>
         </div>
-        <div className={s.descr}>
+        <div>
           <div className={s.text}>
             <Typography as={'h4'} variant={'subtitle1'}>
               Use of&nbsp;Your Personal Data
@@ -342,7 +342,7 @@ export const PrivacyPolicyContent = () => {
             </ul>
           </div>
         </div>
-        <div className={s.descr}>
+        <div>
           <div className={s.text}>
             <Typography as={'h4'} variant={'subtitle1'}>
               Retention of Your Personal Data
@@ -362,7 +362,7 @@ export const PrivacyPolicyContent = () => {
             </Typography>
           </div>
         </div>
-        <div className={s.descr}>
+        <div>
           <div className={s.text}>
             <Typography as={'h4'} variant={'subtitle1'}>
               Transfer of&nbsp;Your Personal Data
@@ -386,7 +386,7 @@ export const PrivacyPolicyContent = () => {
             </Typography>
           </div>
         </div>
-        <div className={s.descr}>
+        <div>
           <div className={s.text}>
             <Typography as={'h4'} variant={'subtitle1'}>
               Delete Your Personal Data
@@ -410,7 +410,7 @@ export const PrivacyPolicyContent = () => {
             </Typography>
           </div>
         </div>
-        <div className={s.descr}>
+        <div>
           <div className={s.text}>
             <Typography as={'h4'} variant={'subtitle1'}>
               Disclosure of Your Personal Data

@@ -1,4 +1,4 @@
-import { PrivacyPolicyContent } from '@/pages'
+import {PrivacyPolicyContent, TableContents} from '@/pages'
 
 import s from './privacy-policy.module.scss'
 export const PrivacyPolicyBlock = () => {
@@ -6,6 +6,7 @@ export const PrivacyPolicyBlock = () => {
     <section className={s.wrapper}>
       <div className={'container'}>
         <PrivacyPolicyContent />
+        <TableContents/>
       </div>
     </section>
   )
