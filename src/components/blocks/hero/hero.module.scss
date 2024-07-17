@@ -6,6 +6,7 @@
 
 .wrapper {
   @include section-wrapper;
+  min-height: 565px;
 
   position: relative;
 

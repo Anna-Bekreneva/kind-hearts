@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom'
 import { LogoVariant } from '@/common'
 
 import s from './logo.module.scss'
+import {APP_ROUTES} from "@/utils";
 
 type Props = {
   to?: string
   variant?: keyof typeof LogoVariant
 }
-export const Logo = ({ to = '/', variant }: Props) => {
+export const Logo = ({ to = APP_ROUTES.home, variant }: Props) => {
   const linkClassName = `${s.logo} ${variant ? s[String(variant)] : s.standard}`
 
   const logoHorizontal = '/assets/images/logo/logo-horizontal.svg'

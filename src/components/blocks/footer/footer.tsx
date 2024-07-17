@@ -1,4 +1,5 @@
 import s from './footer.module.scss'
+import {APP_ROUTES, CONTACTS} from "@/utils";
 
 export const Footer = () => {
   return (
@@ -8,13 +9,13 @@ export const Footer = () => {
           <span>© Kind Hearts 2024</span>
           <a
             className={'link'}
-            href={'https://www.instagram.com/kindheartsfound?igsh=MXRyMDJ6M3ZycnducQ%3D%3D'}
+            href={CONTACTS.instagram.href}
             rel={'noreferrer'}
             target={'_blank'}
           >
-            Instagram
+            {CONTACTS.instagram.label}
           </a>
-          <a className={'link'} href={'#'}>
+          <a className={'link'} href={APP_ROUTES.privacyPolicy}>
             Privacy Policy
           </a>
         </div>

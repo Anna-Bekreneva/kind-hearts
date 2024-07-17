@@ -1,6 +1,7 @@
 import {Typography} from '@/components'
 
 import s from './content.module.scss'
+import {CONTACTS} from "@/utils";
 
 export const PrivacyPolicyContent = () => {
   return (
@@ -100,8 +101,8 @@ export const PrivacyPolicyContent = () => {
               <Typography as={'li'}>
                 <b>Website</b>&nbsp;refers to&nbsp;Charitable Foundation «Kind Hearts», accessible
                 from&nbsp;
-                <Typography as={'a'} href={'https://kind-hearts.vercel.app'} target={'_blank'}>
-                  https://kind-hearts.vercel.app
+                <Typography as={'a'} href={CONTACTS.webSite.href} target={'_blank'}>
+                  {CONTACTS.webSite.label}
                 </Typography>
               </Typography>
               <Typography as={'li'}>
@@ -538,21 +539,20 @@ export const PrivacyPolicyContent = () => {
           <ul className={s.text}>
             <li>
               By&nbsp;email:&nbsp;
-              <a href={'mailto:khertscharity@gmail.com'} rel={'noreferrer'} target={'_blank'}>
-                khertscharity@gmail.com
+              <a href={CONTACTS.email.href} rel={'noreferrer'} target={'_blank'}>
+                {CONTACTS.email.label}
               </a>
             </li>
             <li>
               By&nbsp;visiting this page on&nbsp;our website:&nbsp;
-              <Typography as={'a'} href={'https://kind-hearts.vercel.app'} target={'_blank'}>
-                https://kind-hearts.vercel.app
+              <Typography as={'a'} href={CONTACTS.webSite.href} target={'_blank'}>
+                {CONTACTS.webSite.label}
               </Typography>
-              https://kind-hearts.vercel.app/
             </li>
             <li>
               By&nbsp;phone number:&nbsp;
-              <Typography as={'a'} href={'tel:+17327886611'}>
-                +1 (732) 7886611
+              <Typography as={'a'} href={CONTACTS.phone.href}>
+                {CONTACTS.phone.label}
               </Typography>
             </li>
           </ul>

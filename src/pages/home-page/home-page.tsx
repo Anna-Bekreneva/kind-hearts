@@ -15,7 +15,7 @@ export const HomePage = () => {
     <>
       <Header />
       <main className={'main'}>
-        <Hero />
+        <Hero slogan={'Kindness is proof of\u00A0God'} isButton/>
         <Advantages />
         <Directions />
         <WaysHelp />

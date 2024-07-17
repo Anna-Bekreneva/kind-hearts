@@ -2,10 +2,11 @@ import { LogoVariant } from '@/common'
 import { Logo } from '@/components'
 import { StoryObj } from '@storybook/react'
 import { withRouter } from 'storybook-addon-remix-react-router'
+import {APP_ROUTES} from "@/utils";
 
 const meta = {
   argTypes: {
-    to: { default: '/', type: 'string' },
+    to: { default: APP_ROUTES.home, type: 'string' },
     variant: {
       control: { type: 'radio' },
       options: Object.values(LogoVariant),
