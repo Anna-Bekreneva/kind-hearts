@@ -6,7 +6,7 @@ export const PrivacyPolicePage = () => {
     <>
       <Header />
       <main className={'main'}>
-        <Hero title={'Privacy Policy for\u00A0Charitable Foundation «Kind\u00A0Hearts»'}/>
+        <Hero title={'Privacy Policy for\u00A0Charitable Foundation «Kind\u00A0Hearts»'} />
         <PrivacyPolicyBlock />
       </main>
       <Footer />

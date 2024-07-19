@@ -1,8 +1,8 @@
 import { LogoVariant } from '@/common'
 import { Logo } from '@/components'
+import { APP_ROUTES } from '@/utils'
 import { StoryObj } from '@storybook/react'
 import { withRouter } from 'storybook-addon-remix-react-router'
-import {APP_ROUTES} from "@/utils";
 
 const meta = {
   argTypes: {

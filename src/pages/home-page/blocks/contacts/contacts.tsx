@@ -1,53 +1,8 @@
 import { TypographyVariant } from '@/common'
-import { AddressCard, AddressCardProps, Typography } from '@/components'
+import { AddressCard, Typography } from '@/components'
+import { dataAddress, dataContacts } from '@/pages/home-page/blocks/contacts/data'
 
 import s from './contacts.module.scss'
-import {CONTACTS} from "@/utils";
-
-const dataAddress: AddressCardProps[] = [
-  {
-    backgroundColor: '#FFFAE9',
-    borderColor: '#DFD1A2',
-    text: '77 Bowery, New York, NY\u00A010\u00A0002, 8th\u00A0floor',
-    title: 'Office address',
-  },
-  {
-    backgroundColor: '#FBF8FF',
-    borderColor: '#D7CCE5',
-    text: '63-36 110th St, Forest Hills, NY 11375',
-    title: 'Warehouse address',
-  },
-  {
-    backgroundColor: '#F2FFEF',
-    borderColor: '#CCDBC9',
-    text: 'Monday-Thursday: 10\u00A0a.m.\u00A0to\u00A05 p.m.',
-    title: 'Opening hours',
-  },
-]
-
-type ContactsCardType = {
-  href: string
-  link: string
-  title: string
-}
-
-const dataContacts: ContactsCardType[] = [
-  {
-    href: CONTACTS.phone.href,
-    link: CONTACTS.phone.label,
-    title: 'Call us',
-  },
-  {
-    href: CONTACTS.email.href,
-    link: CONTACTS.email.label,
-    title: 'E-mail us',
-  },
-  {
-    href: CONTACTS.instagram.href,
-    link: CONTACTS.instagram.label,
-    title: 'Follow us\u00A0on\u00A0social media',
-  },
-]
 
 export const Contacts = () => {
   return (
