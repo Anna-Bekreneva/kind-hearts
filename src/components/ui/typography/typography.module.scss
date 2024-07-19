@@ -28,7 +28,8 @@
   }
 }
 
-.subtitle1 {
+.subtitle1,
+.overline {
   font-weight: 600;
   line-height: 1.1;
 }
@@ -40,6 +41,10 @@
 
 .slogan {
   @include adaptive-value-base('font-size', 40, 24, 1);
+}
+
+.overline {
+  font-size: 20px;
 }
 
 .text {

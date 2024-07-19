@@ -1,11 +1,10 @@
-import { Footer, Header } from '@/components'
+import { Footer, Header, Hero } from '@/components'
 import {
   Advantages,
   Cases,
   Consultation,
   Contacts,
   Directions,
-  Hero,
   Questions,
   StateSupports,
   WaysHelp,
@@ -16,7 +15,7 @@ export const HomePage = () => {
     <>
       <Header />
       <main className={'main'}>
-        <Hero />
+        <Hero slogan={'Kindness is proof of\u00A0God'} isButton/>
         <Advantages />
         <Directions />
         <WaysHelp />

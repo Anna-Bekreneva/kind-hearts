@@ -1,4 +1,4 @@
-@import '../../../../styles/mixins';
+@import '../../../styles/mixins/index';
 
 .section {
   padding: 20px 0;
@@ -6,6 +6,7 @@
 
 .wrapper {
   @include section-wrapper;
+  min-height: 565px;
 
   position: relative;
 

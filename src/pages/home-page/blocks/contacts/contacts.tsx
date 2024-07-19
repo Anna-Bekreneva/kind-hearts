@@ -2,6 +2,7 @@ import { TypographyVariant } from '@/common'
 import { AddressCard, AddressCardProps, Typography } from '@/components'
 
 import s from './contacts.module.scss'
+import {CONTACTS} from "@/utils";
 
 const dataAddress: AddressCardProps[] = [
   {
@@ -32,18 +33,18 @@ type ContactsCardType = {
 
 const dataContacts: ContactsCardType[] = [
   {
-    href: 'tel:+17327886611',
-    link: '+1 (732) 7886611',
+    href: CONTACTS.phone.href,
+    link: CONTACTS.phone.label,
     title: 'Call us',
   },
   {
-    href: 'mailto:khertscharity@gmail.com',
-    link: 'khertscharity@gmail.com',
+    href: CONTACTS.email.href,
+    link: CONTACTS.email.label,
     title: 'E-mail us',
   },
   {
-    href: 'https://www.instagram.com/kindheartsfound?igsh=MXRyMDJ6M3ZycnducQ%3D%3D',
-    link: 'Instagram',
+    href: CONTACTS.instagram.href,
+    link: CONTACTS.instagram.label,
     title: 'Follow us\u00A0on\u00A0social media',
   },
 ]

@@ -3,7 +3,7 @@ import { Link } from 'react-scroll'
 
 import { TypographyVariant } from '@/common'
 import { Typography } from '@/components'
-import { childrenStaggerVariants, parentStaggerVariants } from '@/utils'
+import {childrenStaggerVariants, CONTACTS, parentStaggerVariants} from '@/utils'
 import { motion } from 'framer-motion'
 
 import s from './menu.module.scss'
@@ -17,10 +17,10 @@ const menu: Omit<MenuItemProps, 'callback'>[] = [
 ]
 
 const mobileMenu = [
-  { content: '+1 (718) 6350030', href: 'tel:+17186350030' },
+  { content: CONTACTS.phone.label, href: CONTACTS.phone.href },
   {
-    content: 'Instagram',
-    href: 'https://www.instagram.com/kindheartsfound?igsh=MXRyMDJ6M3ZycnducQ%3D%3D',
+    content: CONTACTS.instagram.label,
+    href: CONTACTS.instagram.href,
   },
 ]
 

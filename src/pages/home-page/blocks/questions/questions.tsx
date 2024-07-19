@@ -4,6 +4,7 @@ import { Accordion, AccordionItem, Typography } from '@/components'
 import { v1 } from 'uuid'
 
 import s from './questions.module.scss'
+import {CONTACTS} from "@/utils";
 
 type QuestionType = {
   content: ReactNode
@@ -66,8 +67,8 @@ const questions: QuestionType[] = [
     content: (
       <p>
         Please write your question to{' '}
-        <a href={'mailto:khertscharity@gmail.com'} rel={'noreferrer'} target={'_blank'}>
-          khertscharity@gmail.com
+        <a href={CONTACTS.email.label} rel={'noreferrer'} target={'_blank'}>
+          {CONTACTS.email.label}
         </a>
       </p>
     ),
