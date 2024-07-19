@@ -1,6 +1,7 @@
 import { Button, ControlledTextField, Typography, useFormHook } from '@/components'
 
 import s from './form.module.scss'
+import {APP_ROUTES} from "@/utils";
 
 export const Form = () => {
   const { control, errors, formRef, submitFormHandler } = useFormHook()
@@ -32,7 +33,7 @@ export const Form = () => {
       </div>
       <Typography className={s.police}>
         By&nbsp;clicking Submit, you are agreeing <br /> to our{' '}
-        <Typography as={'a'} className={s.link} href={'#'}>
+        <Typography as={'a'} className={s.link} href={APP_ROUTES.privacyPolicy}>
           Privacy Policy
         </Typography>
         .
