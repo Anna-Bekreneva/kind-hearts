@@ -1,40 +1,35 @@
+import { Link } from 'react-scroll'
 import s from './table-contents.module.scss'
-import {Typography} from "@/components";
-import {TypographyVariant} from "@/common";
+import { TypographyVariant } from '@/common'
+import { Typography } from '@/components'
+import { linkList } from '@/pages/privacy-policy-page/blocks/table-contents/data'
 
-const linkList = [
-  {
-    label: '1. Interpretation and\u00A0Definitions',
-    href: '#interpretation'
-  },
-  {
-    label: '2. Collecting and Using Your Personal Data',
-    href: '#collecting'
-  },
-  {
-    label: '3. Children’s\u00A0Privacy',
-    href: '#childrens'
-  },
-  {
-    label: '4. Links to\u00A0Other Websites',
-    href: '#links'
-  },
-  {
-    label: '5. Changes to\u00A0this Privacy Policy',
-    href: '#changes'
-  },
-  {
-    label: '#contacts',
-    href: '6. Contact Us'
-  }
-]
-
-export const TableContents = () => {
+type Props = {
+  className?: string
+}
+export const TableContents = ({ className }: Props) => {
   return (
-    <nav>
-      <Typography as={'h3'} variant={TypographyVariant.subtitle1}>Table of&nbsp;Contents</Typography>
-      <ul>
-        { linkList.map((link) => <li key={link.href}> <Typography as={'a'} hreef={link.href}> { link.label } </Typography> </li>) }
+    <nav className={`${s.wrapper} ${className}`}>
+      <Typography as={'h3'} variant={TypographyVariant.title}>
+        Table of&nbsp;Contents
+      </Typography>
+      <ul className={s.list}>
+        {linkList.map(link => (
+          <li key={link.href}>
+            <Typography
+              as={Link}
+              className={s.link}
+              href={'#'}
+              offset={-120}
+              role={'menuitem'}
+              smooth
+              to={link.href}
+              variant={TypographyVariant.subtitle2}
+            >
+              {link.label}
+            </Typography>
+          </li>
+        ))}
       </ul>
     </nav>
   )

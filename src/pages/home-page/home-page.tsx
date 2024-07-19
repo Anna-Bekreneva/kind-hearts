@@ -12,10 +12,10 @@ import {
 
 export const HomePage = () => {
   return (
-    <>
+    <div className={'wrapper'}>
       <Header />
       <main className={'main'}>
-        <Hero slogan={'Kindness is proof of\u00A0God'} isButton/>
+        <Hero isButton slogan={'Kindness is proof of\u00A0God'} />
         <Advantages />
         <Directions />
         <WaysHelp />
@@ -26,6 +26,6 @@ export const HomePage = () => {
         <Contacts />
       </main>
       <Footer />
-    </>
+    </div>
   )
 }

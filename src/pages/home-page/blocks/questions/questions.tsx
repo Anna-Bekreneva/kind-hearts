@@ -1,10 +1,10 @@
 import { ReactNode, memo } from 'react'
 
 import { Accordion, AccordionItem, Typography } from '@/components'
+import { CONTACTS } from '@/utils'
 import { v1 } from 'uuid'
 
 import s from './questions.module.scss'
-import {CONTACTS} from "@/utils";
 
 type QuestionType = {
   content: ReactNode

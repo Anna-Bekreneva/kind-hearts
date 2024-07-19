@@ -3,7 +3,7 @@ import { Link } from 'react-scroll'
 
 import { TypographyVariant } from '@/common'
 import { Typography } from '@/components'
-import {childrenStaggerVariants, CONTACTS, parentStaggerVariants} from '@/utils'
+import { CONTACTS, childrenStaggerVariants, parentStaggerVariants } from '@/utils'
 import { motion } from 'framer-motion'
 
 import s from './menu.module.scss'

@@ -5,7 +5,7 @@ import s from './consultation.module.scss'
 
 export const Consultation = () => {
   return (
-    <section className={'section'}>
+    <section className={'section'} id={'consultation'}>
       <div className={'container'}>
         <div className={s.wrapper}>
           <div className={s.descr}>

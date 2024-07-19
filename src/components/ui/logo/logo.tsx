@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 
 import { LogoVariant } from '@/common'
+import { APP_ROUTES } from '@/utils'
 
 import s from './logo.module.scss'
-import {APP_ROUTES} from "@/utils";
 
 type Props = {
   to?: string

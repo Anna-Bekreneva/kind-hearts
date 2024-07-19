@@ -1,11 +1,11 @@
 export const TypographyVariant = {
   large: 'large',
+  overline: 'overline',
   slogan: 'slogan',
   subtitle1: 'subtitle1',
   subtitle2: 'subtitle2',
   text: 'text',
   title: 'title',
-  overline: 'overline'
 } as const
 
 export const ButtonVariant = {
