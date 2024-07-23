@@ -28,8 +28,7 @@ export const StateSupports = () => {
             </Typography>
             <div className={s.text}>
               <Typography variant={TypographyVariant.subtitle2}>
-                Philanthropists can receive a tax deduction on the amount of donations of 30% or
-                more.
+                Philanthropists can receive a tax deduction on the amount of donations of up to 50%.
               </Typography>
               <Typography variant={TypographyVariant.subtitle2}>
                 More information can be found at irs.gov.

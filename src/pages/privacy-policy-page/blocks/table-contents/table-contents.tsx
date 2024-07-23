@@ -1,8 +1,10 @@
 import { Link } from 'react-scroll'
-import s from './table-contents.module.scss'
+
 import { TypographyVariant } from '@/common'
 import { Typography } from '@/components'
 import { linkList } from '@/pages/privacy-policy-page/blocks/table-contents/data'
+
+import s from './table-contents.module.scss'
 
 type Props = {
   className?: string

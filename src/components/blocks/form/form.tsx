@@ -1,7 +1,7 @@
 import { Button, ControlledTextField, Typography, useFormHook } from '@/components'
+import { APP_ROUTES } from '@/utils'
 
 import s from './form.module.scss'
-import {APP_ROUTES} from "@/utils";
 
 export const Form = () => {
   const { control, errors, formRef, submitFormHandler } = useFormHook()

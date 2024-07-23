@@ -44,7 +44,7 @@ export const TextField = forwardRef<HTMLDivElement, TextFieldProps<ElementType>>
           <AlertIcon />
         </button>
       )}
-      {isShowError && (
+      {isShowError && errorMessage && (
         <Typography
           aria-live={'assertive'}
           as={'span'}
