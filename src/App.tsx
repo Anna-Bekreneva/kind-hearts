@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 
-import { HomePage, PrivacyPolicePage } from '@/pages'
+import { HomePage, PrivacyPolicyPage } from '@/pages'
 import { APP_ROUTES } from '@/utils'
 
 export function App() {
@@ -11,7 +11,7 @@ export function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<HomePage />} path={APP_ROUTES.home} />
-          <Route element={<PrivacyPolicePage />} path={APP_ROUTES.privacyPolicy} />
+          <Route element={<PrivacyPolicyPage />} path={APP_ROUTES.privacyPolicy} />
         </Routes>
       </BrowserRouter>
     </>

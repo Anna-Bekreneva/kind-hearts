@@ -29,15 +29,15 @@ export const dataAddress: AddressCardProps[] = [
   {
     backgroundColor: '#FFFAE9',
     borderColor: '#DFD1A2',
-    text: '77 Bowery, New York, NY\u00A010\u00A0002, 8th\u00A0floor',
+    text: '63-36 110th St, Forest Hills, NY 11375',
     title: 'Office address',
   },
-  {
-    backgroundColor: '#FBF8FF',
-    borderColor: '#D7CCE5',
-    text: '63-36 110th St, Forest Hills, NY 11375',
-    title: 'Warehouse address',
-  },
+  // {
+  //   backgroundColor: '#FBF8FF',
+  //   borderColor: '#D7CCE5',
+  //   text: '63-36 110th St, Forest Hills, NY 11375',
+  //   title: 'Warehouse address',
+  // },
   {
     backgroundColor: '#F2FFEF',
     borderColor: '#CCDBC9',
