@@ -41,6 +41,10 @@
   @include adaptive-value-base('right', 80, 0, 1);
 
   position: absolute;
-  bottom: 0;
+  bottom: -15px;
   transform: translateY(50%);
+
+  @include mq(md) {
+    bottom: -35px;
+  }
 }
