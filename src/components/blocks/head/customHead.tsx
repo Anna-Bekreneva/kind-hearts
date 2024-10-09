@@ -8,7 +8,7 @@ type Props = {
 export const CustomHead = ({ description, favicon, title }: Props) => {
   return (
     <Helmet>
-      <title>Home page | Kind Heart</title>
+      <title>{title}</title>
       <meta content={title} property={'og:title'} />
       <meta content={title} property={'og:site_name'} />
       <meta content={description} property={'og:description'} />
