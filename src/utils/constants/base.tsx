@@ -17,7 +17,7 @@ export const CONTACTS = {
     label: '+1 (201) 2280088',
   },
   webSite: {
-    href: 'https://kind-hearts.vercel.app',
-    label: 'https://kind-hearts.vercel.app',
+    href: 'https://khcharity.com/',
+    label: 'https://khcharity.com/',
   },
 }
